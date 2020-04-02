@@ -1,0 +1,197 @@
+$primary-color: rgba(88, 88, 255, 0.842);
+$danger-color: rgb(250, 64, 64);
+
+$football_color: #64dd17;
+$basketball_color: #e65100;
+$tenis_color: #93ff17e8;
+$contacts_color: #01579b;
+
+$cut_down_right: polygon(0 0, 1600px 0, 1600px 92%, 0 100%);
+$cut_down_left: polygon(0 0, 1600px 0, 1600px 100%, 0 92%);
+
+@mixin transform($value) {
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+    transform: $value;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 10px 15px;
+    user-select: none;
+}
+
+body {
+    position: relative;
+    z-index: 0;
+}
+
+.mg-bot-0 {
+    margin-bottom: 0 !important;
+}
+
+.skew {
+    @include transform(skewX(-15deg));
+
+    * {
+        @include transform(skewX(15deg));
+    }
+}
+
+.header_sticky {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav li {
+    display: inline-block;
+    min-width: 50px;
+    min-height: 64px;
+    transition: all .3s !important;
+    transform-origin: top;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+nav {
+    background-color: transparent;
+
+    li {
+        a {
+            transition: all .3s !important;
+            opacity: 0;
+            width: 0;
+        }
+
+        &:hover a {
+            opacity: 1;
+            width: 100px;
+        }
+    }
+
+    ul a:hover {
+        background-color: unset;
+    }
+}
+
+.active {
+    opacity: 1;
+    width: 100px;
+}
+
+#football {
+    background-color: $football_color;
+}
+
+#basketball {
+    background-color: $basketball_color;
+}
+
+#tenis {
+    background-color: $tenis_color;
+}
+
+#vacancy {
+    background-color: teal;
+}
+
+#main {
+    background-color: rgb(47, 73, 139);
+}
+
+#about {
+    background-color: tomato;
+}
+
+#contacts {
+    background-color: $contacts_color;
+}
+
+#gallery {
+    background-color: coral;
+}
+
+.section_cut-right {
+    padding: 30px 0 !important;
+    clip-path: $cut_down_right;
+}
+
+.section_cut-left {
+    padding: 30px 0 !important;
+    clip-path: $cut_down_left;
+}
+
+.pad-bot-sm {
+    padding-bottom: 20px !important;
+}
+
+// Блок логина
+
+.login_block {
+    position: absolute;
+    right: 10px;
+
+    li {
+        width: auto;
+
+        &:hover {
+            width: auto;
+        }
+    }
+
+    a {
+        width: auto;
+        opacity: 1;
+
+        &:hover {
+            width: auto;
+        }
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    z-index: -10;
+    opacity: 0;
+    transition: all .4s;
+}
+
+// //Блок логина
+
+.main-content {
+    z-index: 999;
+    background-color: #fff;
+}
+
+.footer_sticky {
+    position: sticky;
+    bottom: 0;
+    z-index: -10;
+}
+
+.btn {
+    text-transform: unset;
+}
+
+.btn_primary-color {
+    background-color: $primary-color;
+}
