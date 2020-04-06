@@ -31,7 +31,9 @@ export default class Main extends React.Component {
                         </div>
                     </div>
                 </section>
-                <Button textBtn="Click" class="btn-large"></Button>
+                <Button textBtn="Primary" class="btn btn_primary"></Button>
+                <Button textBtn="Accent" class="btn btn_accent"></Button>
+                <Button textBtn="Alert" class="btn btn_alert btn_large"></Button>
             </article>
         );
     }

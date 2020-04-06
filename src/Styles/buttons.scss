@@ -1,0 +1,41 @@
+$primary-bg: #00ccff;
+$accent-bg: #ffcc00;
+$alert-bg: #ff5e00;
+$primary-color: #fff;
+$secondary-color: rgba(0, 0, 0, 0.6);
+
+$borderColor-primary: #000000;
+
+.btn {
+    display: inline-block;
+    height: 30px;
+    width: auto;
+    padding: 0 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $primary-color;
+    border: 2px solid $borderColor-primary;
+    border-radius: 8px;
+    transition: .3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &_primary {
+        background-color: $primary-bg;
+    }
+    &_accent {
+        background-color: $accent-bg;
+        color: $secondary-color;
+    }
+    &_alert {
+        background-color: $alert-bg;
+    }
+    &_large {
+        height: 50px;
+    }
+}

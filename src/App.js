@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './Styles/reset.scss';
 import './Styles/style.scss';
+import './Styles/header.scss';
 import './Styles/grids.scss';
+import './Styles/buttons.scss';
 import './Styles/cards.scss';
 
 // import { Router, Route, IndexRoute, browserHistory, hashHistory } from 'react-router';

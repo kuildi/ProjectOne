@@ -1,5 +1,11 @@
-$primary-color: rgba(88, 88, 255, 0.842);
-$danger-color: rgb(250, 64, 64);
+$default-bg: #FFFFFF;
+$accent-bg: #ffcc00;
+$borderColor: #000000;
+$primary-color: #000000;
+$secondary-color: rgba(0, 0, 0, 0.6);
+$ghost-color: rgba(0, 0, 0, 0.3);
+$link-color: #0077ff;
+
 
 $football_color: #64dd17;
 $basketball_color: #e65100;
@@ -23,8 +29,18 @@ $cut_down_left: polygon(0 0, 1600px 0, 1600px 100%, 0 92%);
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    position: relative;
+    z-index: 0;
+}
+
 a {
+    display: inline-block;
     color: #fff;
+    text-decoration: none;
 
     &:hover {
         cursor: pointer;
@@ -33,12 +49,6 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0 10px 15px;
-    user-select: none;
-}
-
-body {
-    position: relative;
-    z-index: 0;
 }
 
 .mg-bot-0 {
@@ -51,50 +61,6 @@ body {
     * {
         @include transform(skewX(15deg));
     }
-}
-
-.header_sticky {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-nav li {
-    display: inline-block;
-    min-width: 50px;
-    min-height: 64px;
-    transition: all .3s !important;
-    transform-origin: top;
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-}
-
-nav {
-    background-color: transparent;
-
-    li {
-        a {
-            transition: all .3s !important;
-            opacity: 0;
-            width: 0;
-        }
-
-        &:hover a {
-            opacity: 1;
-            width: 100px;
-        }
-    }
-
-    ul a:hover {
-        background-color: unset;
-    }
-}
-
-.active {
-    opacity: 1;
-    width: 100px;
 }
 
 #football {
@@ -143,40 +109,6 @@ nav {
     padding-bottom: 20px !important;
 }
 
-// Блок логина
-
-.login_block {
-    position: absolute;
-    right: 10px;
-
-    li {
-        width: auto;
-
-        &:hover {
-            width: auto;
-        }
-    }
-
-    a {
-        width: auto;
-        opacity: 1;
-
-        &:hover {
-            width: auto;
-        }
-    }
-}
-
-.dropdown-menu {
-    position: absolute;
-    right: 0;
-    z-index: -10;
-    opacity: 0;
-    transition: all .4s;
-}
-
-// //Блок логина
-
 .main-content {
     z-index: 999;
     background-color: #fff;
@@ -186,12 +118,4 @@ nav {
     position: sticky;
     bottom: 0;
     z-index: -10;
-}
-
-.btn {
-    text-transform: unset;
-}
-
-.btn_primary-color {
-    background-color: $primary-color;
 }

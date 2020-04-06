@@ -1,0 +1,60 @@
+$accent-bg: #ffcc00;
+
+header {
+    height: 50px;
+
+    nav {
+        height: 100%;
+        background-color: $accent-bg;
+    }
+}
+
+.nav-block {
+    display: flex;
+    background-color: $accent-bg;
+
+    &_space-between {
+        justify-content: space-between;
+    }
+
+    &__login {
+        margin-right: 20px;
+        padding: 15px 0;
+    }
+
+    li {
+        height: 100%;
+        min-width: 50px;
+        display: inline-block;
+        padding: 15px 0;
+        text-align: center;
+        transition: all .3s !important;
+        transform-origin: top;
+        
+        &.skew a {
+            transition: all .3s !important;
+            opacity: 0;
+            width: 0;
+
+            &.active {
+                opacity: 1;
+                width: 100px;
+            }
+        }
+
+        &.skew:hover a {
+            opacity: 1;
+            width: 100px;
+        }
+    }
+
+    ul {
+        display: inline-block;
+    } 
+}
+
+.header_sticky {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
