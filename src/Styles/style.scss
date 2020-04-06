@@ -1,10 +1,14 @@
-$default-bg: #FFFFFF;
+$primary-bg: #00ccff;
 $accent-bg: #ffcc00;
+$alert-bg: #ff5e00;
 $borderColor: #000000;
 $primary-color: #000000;
 $secondary-color: rgba(0, 0, 0, 0.6);
 $ghost-color: rgba(0, 0, 0, 0.3);
-$link-color: #0077ff;
+
+$s-space: 10px;
+$m-space: 20px;
+$l-space: 40px;
 
 
 $football_color: #64dd17;
@@ -47,8 +51,15 @@ a {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0 10px 15px;
+h1, h2 {
+    line-height: 1.2;
+    margin-bottom: $s-space;
+}
+h1 {
+    font-size: 38px;
+}
+h2 {
+    font-size: 24px;
 }
 
 .mg-bot-0 {
@@ -95,14 +106,17 @@ h1, h2, h3, h4, h5, h6 {
     background-color: coral;
 }
 
-.section_cut-right {
-    padding: 30px 0 !important;
-    clip-path: $cut_down_right;
-}
-
-.section_cut-left {
-    padding: 30px 0 !important;
-    clip-path: $cut_down_left;
+.section {
+    &_space_m {
+        padding: $m-space;
+        padding-top: $s-space;
+    }
+    &_cut-right {
+        clip-path: $cut_down_right;
+    }
+    &_cut-left {
+        clip-path: $cut_down_left;
+    }
 }
 
 .pad-bot-sm {
@@ -112,10 +126,32 @@ h1, h2, h3, h4, h5, h6 {
 .main-content {
     z-index: 999;
     background-color: #fff;
+
+    &_space-g_l {
+        padding: 0 $l-space;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-content {
+        padding: 0;
+    }
 }
 
 .footer_sticky {
     position: sticky;
     bottom: 0;
     z-index: -10;
+}
+
+.bg {
+    &-primary {
+        background-color: $primary-bg;
+    }
+    &-accent {
+        background-color: $accent-bg;
+    }
+    &-alert {
+        background-color: $alert-bg;
+    }
 }

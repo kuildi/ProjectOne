@@ -16,7 +16,7 @@ export default class Layout extends React.Component {
         return (
             <>
                 <Navbar></Navbar>
-                <main className="row main-content">
+                <main className="main-content main-content_space-g_l">
                     {this.props.children}
                 </main>
                 <Footer></Footer>
