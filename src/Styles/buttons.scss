@@ -1,10 +1,4 @@
-$primary-bg: #0097bd;
-$accent-bg: #ffcc00;
-$alert-bg: #ff5e00;
-$primary-color: #fff;
-$secondary-color: rgba(0, 0, 0, 0.6);
-
-$borderColor-primary: #000000;
+@import 'variables';
 
 .btn {
     display: inline-block;
@@ -20,7 +14,7 @@ $borderColor-primary: #000000;
     color: $primary-color;
     border: 2px solid transparent;
     border-radius: 8px;
-    transition: .3s;
+    transition:  all .08s linear;
 
     &:hover {
         transform: scale(1.05);

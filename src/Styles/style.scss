@@ -1,23 +1,4 @@
-$primary-bg: #00ccff;
-$accent-bg: #ffcc00;
-$alert-bg: #ff5e00;
-$borderColor: #000000;
-$primary-color: #000000;
-$secondary-color: rgba(0, 0, 0, 0.6);
-$ghost-color: rgba(0, 0, 0, 0.3);
-
-$s-space: 10px;
-$m-space: 20px;
-$l-space: 40px;
-
-
-$football_color: #64dd17;
-$basketball_color: #e65100;
-$tenis_color: #93ff17e8;
-$contacts_color: #01579b;
-
-$cut_down_right: polygon(0 0, 1600px 0, 1600px 92%, 0 100%);
-$cut_down_left: polygon(0 0, 1600px 0, 1600px 100%, 0 92%);
+@import 'variables';
 
 @mixin transform($value) {
     -webkit-transform: $value;
