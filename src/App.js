@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './Styles/reset.scss';
 import './Styles/style.scss';
 import './Styles/header.scss';
+import './Styles/footer.scss';
 import './Styles/grids.scss';
 import './Styles/buttons.scss';
 import './Styles/cards.scss';
