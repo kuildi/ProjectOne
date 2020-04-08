@@ -13,7 +13,7 @@ export default class Navbar extends React.Component {
             { id: "gallery", href: "/gallery", title: "Галлерея" }
         ];
         return (
-            <header className="header_sticky amber darken-1">
+            <header className="main-header header_sticky">
                 <nav className="nav-block nav-block_space-between">
                     <Menu items={menuItems}></Menu>
                     <a className="nav-block__login" href="#">Войти</a>

@@ -36,12 +36,24 @@
       &-inner {
          grid-column: span 3;
       }
+
+      &_distribute_center  {
+         grid-column: 3/5;
+      }
    }
 }
 
 
 @media screen and (max-width: 1024px) {
+   .grid__item_distribute_center {
+      grid-column: 2/6;
+   }
+}
 
+@media screen and (max-width: 900px) {
+   .grid__item_distribute_center {
+      grid-column: span 6;
+   }
 }
  
 .grid-container {

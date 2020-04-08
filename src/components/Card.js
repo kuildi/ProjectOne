@@ -4,12 +4,11 @@ import Button from './Button';
 export default class Card extends React.Component {
     render() {
         return (
-            <aside className={"card hoverable " + this.props.class}>
-                {/* <section className="card__cover"></section> */}
+            <aside className={"card hoverable bg-alert " + this.props.class}>
                 <header className="card__header">
-                    <h5>{this.props.header}</h5>
+                    <h3>{this.props.header}</h3>
                 </header>
-                <div className="card__content white-text">
+                <div className="card__content text-overflow_fade">
                     <p>{this.props.text}</p>
                 </div>
                 <footer className="card__footer">
