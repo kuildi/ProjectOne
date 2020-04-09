@@ -18,3 +18,8 @@ export default class Card extends React.Component {
         );
     }
 }
+
+Card.defaultProps = {
+ header: 'Header text',
+ text: 'Default textDefault text Default text Default text Default textDefault text'       
+}
