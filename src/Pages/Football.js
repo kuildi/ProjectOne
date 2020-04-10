@@ -16,7 +16,7 @@ export default class Football extends React.Component {
 
         return (
             <article className="row center">
-                <h1>Football posts</h1>
+                <h1 className="main-content__header">Football posts</h1>
                 <Posts items={articleItems}/>
             </article>
         );

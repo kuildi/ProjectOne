@@ -12,7 +12,7 @@ export default class Contacts extends React.Component {
 
         return (
             <article className="grid-main">
-                <h1 className="text-center grid__item_width_full">Contacts</h1>
+                <h1 className="text-center grid__item_width_full main-content__header">Contacts</h1>
                 <div className="grid__item_width_half grid__item_distribute_center">
                     <Card header={'Контакты'} text={contactText} class={''}/>   
                 </div>

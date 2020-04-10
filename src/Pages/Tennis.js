@@ -14,7 +14,7 @@ export default class Tennis extends React.Component {
 
         return (
             <article className="row center">
-                <h1>Tennis posts</h1>
+                <h1 className="main-content__header">Tennis posts</h1>
                 <Posts items={tennisData} />
             </article>
         );

@@ -58,6 +58,7 @@
  
 .grid-container {
    @extend %grid-container;
+   grid-template-rows: repeat(3, 1fr);
 }
 
 .grid-container_masonry {
