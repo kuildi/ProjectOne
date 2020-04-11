@@ -15,8 +15,8 @@ export default class Footer extends React.Component {
 
         return (
             <footer className="main-footer main-footer_sticky">
-                <div className="container">
-                    <h2>Footer Content</h2>
+                <div className="main-footer__container">
+                    <h2 className="main-footer__header_indent-b_s">Footer Content</h2>
                     <p>You can use rows and columns here to organize your footer content.</p>
                 </div>
             </footer>

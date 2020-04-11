@@ -10,4 +10,12 @@
         position: sticky;
         bottom: 0;
     }
+
+    &__container {
+        margin-bottom: $l-space;
+    }
+
+    &__header_indent-b_s {
+        margin-bottom: $s-space;
+    }
 }
