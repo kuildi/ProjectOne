@@ -27,10 +27,10 @@ ReactDOM.render(
 		<Layout>
 			<Route exact path='/' component={Main} />
 			<Route path="/football" component={Football}></Route>
-			<Route path="/basketball" component={Basketball}></Route>
-			<Route path="/contacts" component={Contacts}></Route>
+			{/* <Route path="/basketball" component={Basketball}></Route>
 			<Route path="/cricket" component={Cricket}></Route>
-			<Route path="/tennis" component={Tennis}></Route>
+			<Route path="/tennis" component={Tennis}></Route> */}
+			<Route path="/contacts" component={Contacts}></Route>
 			<Route path="/gallery" component={Gallery}></Route>
 		</Layout>
 	</Router>,

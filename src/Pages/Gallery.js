@@ -6,7 +6,7 @@ export default class Gallery extends React.Component {
     render() {
 
         return (
-            <article className="grid-container_masonry">
+            <article className="grid-container_masonry grid-container_space-v_m">
                 <Card class='photo' />
                 <Card class='event' />
                 <Card class='post' />

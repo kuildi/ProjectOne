@@ -59,20 +59,26 @@
 .grid-container {
    @extend %grid-container;
    grid-template-rows: repeat(3, 1fr);
+
+   &_space-v_m {
+      padding: $m-space 0;
+   }
+   
+   &_masonry {
+      @extend %grid-container;
+      grid-auto-rows: 200px;
+   
+      .photo {
+         grid-row-end: span 2;
+      }
+      .event {
+         grid-row-end: span 3;
+      }
+      .post {
+         grid-row-end: span 1;
+      }
+   }
 }
 
-.grid-container_masonry {
-   @extend %grid-container;
-   grid-auto-rows: 200px;
 
-   .photo {
-      grid-row-end: span 2;
-   }
-   .event {
-      grid-row-end: span 3;
-   }
-   .post {
-      grid-row-end: span 1;
-   }
-}
 

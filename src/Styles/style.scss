@@ -112,8 +112,11 @@ a {
 
     &__header {
         line-height: 1.2;
-        margin-bottom: $s-space;
         color: $secondary-color;
+    
+        &_indent-b_s {
+            margin-bottom: $s-space;
+        }
     }
 }
 

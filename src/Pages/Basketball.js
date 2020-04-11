@@ -13,7 +13,7 @@ export default class Basketball extends React.Component {
 
         return (
             <article className="row center">
-                <h1 className="main-content__header">Basketball posts</h1>
+                <h1 className="main-content__header main-content__header_indent-b_s">Basketball posts</h1>
                 <Posts items={basketballData} />
             </article>
         );
