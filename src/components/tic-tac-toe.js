@@ -106,8 +106,8 @@ export default class Game extends React.Component {
         }
 
         return (
-            <article className="game">
-                <section className="game__board">
+            <article className="game grid-main">
+                <section className="game__board grid__item_distribute_center">
                     <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
                 </section>
                 <section className="game__info">

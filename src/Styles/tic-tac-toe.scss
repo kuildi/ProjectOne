@@ -1,5 +1,7 @@
 @import 'variables';
 
+$square-size: 150px;
+
 .board-row {
 
     &:first-of-type {
@@ -25,8 +27,8 @@
 }
 
 .square {
-    width: 150px;
-    height: 150px;
+    width: 33.3%;
+    height: $square-size;
     background: #fff;
     border: 1px solid #999;
     float: left;
@@ -36,6 +38,19 @@
     margin-top: -1px;
     padding: 0;
     text-align: center;
+
+    @media screen and (max-width: 1200px) {
+        $square-size: 120px;
+        & {
+           height: $square-size;
+        }
+     }
+    @media screen and (max-width: 1024px) {
+        $square-size: 180px;
+        & {
+           height: $square-size;
+        }
+     }
 }
 
 .square:focus {
@@ -49,12 +64,13 @@
 }
 
 .game {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+    &__board {
+        display: inline-block;
+        min-width: 300px;
+    }
     
     &__info {
-        margin-left: 20px;
     
         p {
             font-size: $l-fontSize;

@@ -1,3 +1,4 @@
+@import 'variables';
 $accent-bg: #ffcc00;
 
 .main-header {
@@ -27,6 +28,7 @@ $accent-bg: #ffcc00;
         min-width: 50px;
         display: inline-block;
         text-align: center;
+        border-right: 1px solid $secondary-color;
         transition: all .3s !important;
         transform-origin: top;
         
