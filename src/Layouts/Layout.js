@@ -8,10 +8,6 @@ export default class Layout extends React.Component {
         super(props);
     }
 
-    // isActive(href) {
-    //     return window.location.pathname === href;
-    // }
-
     render() {
         return (
             <>

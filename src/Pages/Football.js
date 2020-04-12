@@ -1,5 +1,6 @@
 import React from 'react';
 import Posts from '../components/Posts';
+import Game from '../components/tic-tac-toe';
 
 export default class Football extends React.Component {
 
@@ -18,6 +19,7 @@ export default class Football extends React.Component {
             <article className="row center">
                 <h1 className="main-content__header main-content__header_indent-b_s">Football posts</h1>
                 <Posts items={articleItems}/>
+                <Game />
             </article>
         );
     }
