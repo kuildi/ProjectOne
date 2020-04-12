@@ -52,6 +52,8 @@ export default class Main extends React.Component {
                 <Button textBtn="Primary" class="btn_primary"></Button>
                 <Button textBtn="Accent" class="btn_accent"></Button>
                 <Button textBtn="Alert" class="btn_alert btn_large"></Button>
+
+                <input className="input-form" type="text" name="" id=""/>
             </article>
         );
     }

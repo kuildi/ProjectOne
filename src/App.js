@@ -5,6 +5,7 @@ import './Styles/style.scss';
 import './Styles/header.scss';
 import './Styles/footer.scss';
 import './Styles/grids.scss';
+import './Styles/inputs.scss';
 import './Styles/buttons.scss';
 import './Styles/cards.scss';
 import './Styles/tic-tac-toe.scss';
