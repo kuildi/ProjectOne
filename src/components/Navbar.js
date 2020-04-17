@@ -16,7 +16,6 @@ export default class Navbar extends React.Component {
             <header className="main-header header_sticky">
                 <nav className="nav-block nav-block_space-between">
                     <Menu items={menuItems}></Menu>
-                    <a className="nav-block__login" href="#">Войти</a>
                 </nav>
             </header>
         );
