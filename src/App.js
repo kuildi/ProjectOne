@@ -14,6 +14,8 @@ import { HashRouter as Router, Route, Switch, browserHistory } from "react-route
 import Layout from './Layouts/Layout';
 import Main from './Pages/Main';
 import Football from './Pages/Football';
+import Users from './Pages/Users';
+import User from './Pages/User';
 import Contacts from './Pages/Contacts';
 import Gallery from './Pages/Gallery';
 import PageNotFound from './Pages/PageNotFound';
@@ -26,10 +28,13 @@ ReactDOM.render(
 		<Layout>
 			<Switch>
 				<Route exact path='/' component={Main} />
-				<Route path="/football" component={Football}></Route>
-				<Route path="/contacts" component={Contacts}></Route>
-				<Route path="/gallery" component={Gallery}></Route>
-				<Route path="*" component={PageNotFound}></Route>
+				<Route path="/football" component={Football}/>
+				<Route path="/users" component={Users}>
+					<Route path=":userId" component={User}/>
+				</Route>
+				<Route path="/contacts" component={Contacts}/>
+				<Route path="/gallery" component={Gallery}/>
+				<Route path="*" component={PageNotFound}/>
 			</Switch>
 		</Layout>
 	</Router>,

@@ -11,11 +11,11 @@ export default class Layout extends React.Component {
     render() {
         return (
             <>
-                <Navbar></Navbar>
+                <Navbar />
                 <main className="main-content main-content_space-g_l">
                     {this.props.children}
                 </main>
-                <Footer></Footer>
+                <Footer />
             </>
         );
     }

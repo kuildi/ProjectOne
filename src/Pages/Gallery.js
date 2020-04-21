@@ -1,24 +1,32 @@
 import React from 'react';
-import Card from '../components/Card';
+import axios from 'axios';
+import Photo from '../components/Photo';
 
 export default class Gallery extends React.Component {
-    
+    constructor(props) {
+        super(props);
+        this.state = {
+            photos: []
+        }
+
+        axios.get('https://jsonplaceholder.typicode.com/photos?albumId=1').
+        then((response) => {
+            this.setState({photos: response.data})
+        })
+    }
+
     render() {
+        if (!this.state.photos.length) {
+            return null
+        }
+
+        let photos = this.state.photos.map((photo, index) => {
+            return <Photo key={index} {...photo} />
+        })
 
         return (
             <article className="grid-container_masonry grid-container_space-v_m">
-                <Card class='photo' />
-                <Card class='event' />
-                <Card class='post' />
-                <Card class='photo' />
-                <Card class='post' />
-                <Card class='photo' />
-                <Card class='post' />
-                <Card class='post' />
-                <Card class='photo' />
-                <Card class='post' />
-                <Card class='post' />
-                <Card class='post' />
+                {photos}
             </article>
         )
     }

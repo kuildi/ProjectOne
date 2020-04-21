@@ -10,6 +10,7 @@ export default class Card extends React.Component {
                 </header>
                 <div className="card__content text-overflow_fade">
                     <p>{this.props.text}</p>
+                    {this.props.children}
                 </div>
             </aside>
         );

@@ -70,7 +70,6 @@
    
    &_masonry {
       @extend %grid-container;
-      grid-auto-rows: 200px;
    
       .photo {
          grid-row-end: span 2;

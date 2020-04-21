@@ -5,7 +5,9 @@ export default class MenuItem extends React.Component {
 	render() {
 		return (
 			<li className='skew' id={this.props.id}>
-				<NavLink to={this.props.href} activeClassName="active">{this.props.children}</NavLink>
+				<NavLink to={this.props.href} activeClassName="active">
+					{this.props.children}
+				</NavLink>
 			</li>
 		);
 	}

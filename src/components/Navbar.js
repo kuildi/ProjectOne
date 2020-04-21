@@ -6,9 +6,8 @@ export default class Navbar extends React.Component {
         const menuItems = [
             { id: "main", href: "/", title: "Главная" },
             { id: "football", href: "/football", title: "Футбол" },
-            // { id: "basketball", href: "/basketball", title: "Баскетбол" },
-            // { id: "tenis", href: "/tennis", title: "Теннис" },
-            // { id: "vacancy", href: "/cricket", title: "Крикет" },
+            { id: "users", href: "/users", title: "Пользователи" },
+            // { id: "user", href: "/user", title: "Пользователь" },
             { id: "contacts", href: "/contacts", title: "Контакты" },
             { id: "gallery", href: "/gallery", title: "Галлерея" }
         ];

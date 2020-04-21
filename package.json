@@ -12,6 +12,7 @@
   "author": "KuilDi",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "create-react-class": "^15.6.3",
     "jquery": "^3.3.1",
     "materialize-css": "^1.0.0-rc.2",
