@@ -7,12 +7,14 @@ export default class Users extends React.Component {
 
         return (
             <>
-                {
+                {/* {
                     (!this.props.children) ?
                     <UsersList/>
                     :
                     (this.props.children)
-                }
+                } */}
+
+                <UsersList />
             </>
         );
     }

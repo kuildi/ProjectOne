@@ -10,9 +10,9 @@ export default class UsersList extends React.Component {
         }
 
         axios.get('https://jsonplaceholder.typicode.com/users/').
-        then((response) => {
-            this.setState({users: response.data})
-        })
+            then((response) => {
+                this.setState({ users: response.data })
+            })
     }
 
     render() {

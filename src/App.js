@@ -10,7 +10,7 @@ import './Styles/buttons.scss';
 import './Styles/cards.scss';
 import './Styles/tic-tac-toe.scss';
 
-import { HashRouter as Router, Route, Switch, browserHistory } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Layout from './Layouts/Layout';
 import Main from './Pages/Main';
 import Football from './Pages/Football';
@@ -24,14 +24,23 @@ const app = document.getElementById('root');
 
 
 ReactDOM.render(
-	<Router history={browserHistory}>
+	<Router>
 		<Layout>
 			<Switch>
 				<Route exact path='/' component={Main} />
 				<Route path="/football" component={Football}/>
-				<Route path="/users" component={Users}>
-					<Route path=":userId" component={User}/>
-				</Route>
+				{/* <Route path="/users" component={Users} /> */}
+
+				<Route
+					path="/users"
+					render={({ match: { url } }) => (
+					<>
+						<Route path={`${url}/`} component={Users}/>
+						<Route path={`${url}/:userId`} component={User}/>
+					</>
+					)}
+				/>
+
 				<Route path="/contacts" component={Contacts}/>
 				<Route path="/gallery" component={Gallery}/>
 				<Route path="*" component={PageNotFound}/>
