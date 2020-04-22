@@ -29,18 +29,15 @@ ReactDOM.render(
 			<Switch>
 				<Route exact path='/' component={Main} />
 				<Route path="/football" component={Football}/>
-				{/* <Route path="/users" component={Users} /> */}
-
 				<Route
 					path="/users"
 					render={({ match: { url } }) => (
 					<>
-						<Route path={`${url}/`} component={Users}/>
+						<Route exact path={`${url}/`} component={Users}/>
 						<Route path={`${url}/:userId`} component={User}/>
 					</>
 					)}
 				/>
-
 				<Route path="/contacts" component={Contacts}/>
 				<Route path="/gallery" component={Gallery}/>
 				<Route path="*" component={PageNotFound}/>
