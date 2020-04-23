@@ -1,5 +1,6 @@
 const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const fallbackApi = require ('connect-history-api-fallback');
 
 module.exports = {
 	entry: './src/App.js',
@@ -39,6 +40,7 @@ module.exports = {
 		new BrowserSyncPlugin({
 			host: 'localhost',
 			port: 3000,
+			middleware: fallbackApi(),
 			route: "/",
 			server: {baseDir: ['dist']}
 		})

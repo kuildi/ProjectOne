@@ -10,6 +10,6 @@ export default function Button(props) {
 
 Button.defaultProps = {
     class: '',
-    onClick: '',
+    onClick: null,
     textBtn: 'Button text'
 }
