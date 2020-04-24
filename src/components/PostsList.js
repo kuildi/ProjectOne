@@ -1,10 +1,13 @@
 import React from 'react'
+import {Orbitals} from 'react-spinners-css'
 import PostItem from './PostItem'
 
 export default class PostsList extends React.Component {
     render() {
         if (!this.props.posts.length) {
-            return null;
+            return (
+                <Orbitals color="#be97e8"/>
+            )
         }
 
         let posts = this.props.posts.map((post, index) => {
