@@ -24,5 +24,5 @@ $primary-shadow: 5px 2px 5px 0px rgba(0,0,0,0.2);
 // $tenis_color: #93ff17e8;
 // $contacts_color: #01579b;
 
-$cut_down_right: polygon(0 0, 1600px 0, 1600px 92%, 0 100%);
-$cut_down_left: polygon(0 0, 1600px 0, 1600px 100%, 0 92%);
+$cut_down_right: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+$cut_down_left: polygon(0 0, 100% 0, 100% 100%, 0 92%);

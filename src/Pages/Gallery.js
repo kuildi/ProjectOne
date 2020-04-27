@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {Orbitals} from 'react-spinners-css';
 import Photo from '../components/Photo';
 
 export default class Gallery extends React.Component {
@@ -17,7 +18,9 @@ export default class Gallery extends React.Component {
 
     render() {
         if (!this.state.photos.length) {
-            return null
+            return (
+                <Orbitals color="#be97e8"/>
+            )
         }
 
         let photos = this.state.photos.map((photo, index) => {

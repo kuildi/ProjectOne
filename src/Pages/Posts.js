@@ -47,8 +47,8 @@ export default class Posts extends React.Component {
         return (
             <>
                 <Button class="btn_primary" text="Add post" onClick={this.newPost} />
-                <input type="text" value={this.state.headerValue} onChange={this.handleHeaderChange} />
-                <input type="text" value={this.state.bodyValue} onChange={this.handleBodyChange} />
+                <input className="input-form" type="text" value={this.state.headerValue} onChange={this.handleHeaderChange} />
+                 <input className="input-form" type="text" value={this.state.bodyValue} onChange={this.handleBodyChange} />
                 <PostsList posts={this.state.posts} />
             </>
         );
