@@ -1,49 +1,42 @@
 import React from 'react';
-import {addPost, getPosts, deletePost} from '../actions/postActions';
+import { addPost, getPosts, deletePost } from '../actions/postActions';
 import PostsList from '../components/PostsList';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
-import FormPost from '../components/AddPost';
-// import $ from 'jquery';
+import AddPost from '../components/AddPost';
+import $ from 'jquery';
 
 class Posts extends React.Component {
 
+    componentWillUnmount() {
+        $('body').off('submit');
+        $('body').off('click');
+    }
 
-    // newPost(){
-    //     addPost('Мой пост', 105, 'Текст вновь добавленного поста');
-    // }
+    componentDidMount() {
+        this.props.dispatch(getPosts());
 
-    // componentWillUnmount()
-    // {
-    //     $('body').off('submit');
-    //     $('body').off('click');
+        $('body').on('submit', (event) => {
+            event.preventDefault();
 
-    // }
-    // componentDidMount()
-    // {
-    //     this.props.dispatch(getPosts());
+            const $userId = $('#idUser');
+            const $postTitle = $('#postTitle');
+            const $postBody = $('#postBody');
 
-    //     $('body').on('submit', (event) => {
-    //         event.preventDefault();
+            const posts = addPost($postTitle.val(), $userId.val(), $postBody.val());
+            this.props.dispatch(posts);
 
-    //         const $userId = $('#idUser');
-    //         const $postTitle = $('#postTitle');
-    //         const $postBody = $('#postBody');
+            $userId.val('');
+            $postTitle.val('');
+            $postBody.val('');
+        });
 
-    //         const posts = addPost($postTitle.val(), $userId.val(), $postBody.val());
-    //         this.props.dispatch(posts);
-
-    //         $userId.val('');
-    //         $postTitle.val('');
-    //         $postBody.val('');
-    //     });
-
-    //     $('body').on('click', 'a.post_del', (event) => {
-    //         event.preventDefault();
-    //         let idPost = $(event.currentTarget).attr('data-id');
-    //         this.props.dispatch(deletePost(idPost));
-    //     });
-    // }
+        $('body').on('click', 'a.post_del', (event) => {
+            event.preventDefault();
+            let idPost = $(event.currentTarget).attr('data-id');
+            this.props.dispatch(deletePost(idPost));
+        });
+    }
 
     render() {
 
@@ -53,8 +46,8 @@ class Posts extends React.Component {
 
         return (
             <div>
-                <FormPost/>
-                <PostsList posts={this.props.posts}/>
+                <AddPost />
+                <PostsList posts={this.props.posts} />
             </div>
         );
     }
@@ -66,6 +59,5 @@ const mapStateToProps = (state) => {
         is_loading: state.posts.is_loading
     }
 }
-
 
 export default connect(mapStateToProps)(Posts); 
