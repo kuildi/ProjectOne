@@ -1,56 +1,71 @@
-import React from 'react'
-import PostStore from '../stores/postStore'
-import { addPost, getPosts } from '../actions/postActions'
-import Button from '../components/Button'
-import PostsList from '../components/PostsList'
+import React from 'react';
+import {addPost, getPosts, deletePost} from '../actions/postActions';
+import PostsList from '../components/PostsList';
+import {connect} from 'react-redux';
 
-export default class Posts extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            posts: [],
-            headerValue: '',
-            bodyValue: ''
-        }
+import FormPost from '../components/AddPost';
+// import $ from 'jquery';
 
-        this.onPostChange = this.onPostChange.bind(this);
-        this.newPost = this.newPost.bind(this);
-        this.handleHeaderChange = this.handleHeaderChange.bind(this);
-        this.handleBodyChange = this.handleBodyChange.bind(this);
-    }
+class Posts extends React.Component {
 
-    handleHeaderChange(event) {
-        this.setState({ headerValue: event.target.value });
-    }
-    handleBodyChange(event) {
-        this.setState({ bodyValue: event.target.value });
-    }
 
-    onPostChange() {
-        this.setState({ posts: PostStore.posts });
-    }
+    // newPost(){
+    //     addPost('Мой пост', 105, 'Текст вновь добавленного поста');
+    // }
 
-    newPost() {
-        addPost(this.state.headerValue, this.state.bodyValue, 1)
-    }
+    // componentWillUnmount()
+    // {
+    //     $('body').off('submit');
+    //     $('body').off('click');
 
-    componentDidMount() {
-        getPosts();
-        PostStore.on('change', this.onPostChange);
-    }
+    // }
+    // componentDidMount()
+    // {
+    //     this.props.dispatch(getPosts());
 
-    componentWillUnmount() {
-        PostStore.removeListener('change', this.onPostChange);
-    }
+    //     $('body').on('submit', (event) => {
+    //         event.preventDefault();
+
+    //         const $userId = $('#idUser');
+    //         const $postTitle = $('#postTitle');
+    //         const $postBody = $('#postBody');
+
+    //         const posts = addPost($postTitle.val(), $userId.val(), $postBody.val());
+    //         this.props.dispatch(posts);
+
+    //         $userId.val('');
+    //         $postTitle.val('');
+    //         $postBody.val('');
+    //     });
+
+    //     $('body').on('click', 'a.post_del', (event) => {
+    //         event.preventDefault();
+    //         let idPost = $(event.currentTarget).attr('data-id');
+    //         this.props.dispatch(deletePost(idPost));
+    //     });
+    // }
 
     render() {
+
+        if (this.props.is_loading) {
+            return <div>Данные загружаются...</div>
+        }
+
         return (
-            <>
-                <Button class="btn_primary" text="Add post" onClick={this.newPost} />
-                <input className="input-form" type="text" value={this.state.headerValue} onChange={this.handleHeaderChange} />
-                 <input className="input-form" type="text" value={this.state.bodyValue} onChange={this.handleBodyChange} />
-                <PostsList posts={this.state.posts} />
-            </>
+            <div>
+                <FormPost/>
+                <PostsList posts={this.props.posts}/>
+            </div>
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        posts: state.posts.posts,
+        is_loading: state.posts.is_loading
+    }
+}
+
+
+export default connect(mapStateToProps)(Posts); 

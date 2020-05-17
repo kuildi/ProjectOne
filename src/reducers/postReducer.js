@@ -11,10 +11,6 @@ export function postsReducer(state = {posts: [], is_loading: false}, action) {
 			state = {...state, is_loading: false, posts: action.payload.data};
 			break;
 		}
-		case ConstantPosts.GET_POSTS: {
-			state = {...state, is_loading: true, posts: action.payload.data};
-			break;
-		}
 		case ConstantPosts.GET_POSTS_REJECTED: {
 			state = {...state, is_loading: false, error_message: action.payload.message};
 			break;

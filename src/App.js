@@ -21,29 +21,34 @@ import Gallery from './Pages/Gallery';
 import Posts from './Pages/Posts';
 import PageNotFound from './Pages/PageNotFound';
 
+import { Provider } from 'react-redux';
+import store from './store'
+
 const app = document.getElementById('root');
 
 
 ReactDOM.render(
-	<Router>
-		<Layout>
-			<Switch>
-				<Route exact path='/' component={Main} />
-				<Route path="/football" component={Football}/>
-				<Route
-					path="/users"
-					render={({ match: { url } }) => (
-					<>
-						<Route exact path={`${url}/`} component={Users}/>
-						<Route path={`${url}/:userId`} component={User}/>
-					</>
-					)}
-				/>
-				<Route path="/contacts" component={Contacts}/>
-				<Route path="/posts" component={Posts}/>
-				<Route path="/gallery" component={Gallery}/>
-				<Route path="*" component={PageNotFound}/>
-			</Switch>
-		</Layout>
-	</Router>,
+	<Provider store={store}>
+		<Router>
+			<Layout>
+				<Switch>
+					<Route exact path='/' component={Main} />
+					<Route path="/football" component={Football} />
+					<Route
+						path="/users"
+						render={({ match: { url } }) => (
+							<>
+								<Route exact path={`${url}/`} component={Users} />
+								<Route path={`${url}/:userId`} component={User} />
+							</>
+						)}
+					/>
+					<Route path="/contacts" component={Contacts} />
+					<Route path="/posts" component={Posts} />
+					<Route path="/gallery" component={Gallery} />
+					<Route path="*" component={PageNotFound} />
+				</Switch>
+			</Layout>
+		</Router>
+	</Provider>,
 	app);
