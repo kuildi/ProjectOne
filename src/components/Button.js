@@ -3,7 +3,7 @@ import React from 'react';
 export default function Button(props) {
     return (
         <button className={"btn " + props.class} onClick={props.onClick}>
-            {props.textBtn}
+            {props.children}
         </button>
     );
 }
@@ -11,5 +11,5 @@ export default function Button(props) {
 Button.defaultProps = {
     class: '',
     onClick: null,
-    textBtn: 'Button text'
+    children: 'Button text'
 }
