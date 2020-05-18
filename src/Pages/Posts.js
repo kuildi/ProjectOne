@@ -4,6 +4,7 @@ import PostsList from '../components/PostsList';
 import { connect } from 'react-redux';
 
 import AddPost from '../components/AddPost';
+import {Orbitals} from 'react-spinners-css';
 import $ from 'jquery';
 
 class Posts extends React.Component {
@@ -41,7 +42,7 @@ class Posts extends React.Component {
     render() {
 
         if (this.props.is_loading) {
-            return <div>Данные загружаются...</div>
+            return <Orbitals color="#be97e8"/>
         }
 
         return (
