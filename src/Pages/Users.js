@@ -1,77 +1,70 @@
 import React from 'react'
-import UserStore from '../stores/userStore'
+import { connect } from 'react-redux'
 import { addUser, getUsers } from '../actions/userActions'
 import Button from '../components/Button'
 import UsersList from '../components/UsersList'
+import { Orbitals } from 'react-spinners-css'
+import $ from 'jquery'
 
-export default class Users extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            users: [],
-            userId: '',
-            name: '',
-            userName: '',
-            email: '',
-            phone: ''
-        }
-
-        this.onUserChange = this.onUserChange.bind(this);
-        this.newUser = this.newUser.bind(this);
-        this.handleUserIdChange = this.handleUserIdChange.bind(this);
-        this.handleNameChange = this.handleNameChange.bind(this);
-        this.handleUserNameChange = this.handleUserNameChange.bind(this);
-        this.handleEmailChange = this.handleEmailChange.bind(this);
-        this.handlePhoneChange = this.handlePhoneChange.bind(this);
-    }
-
-    handleUserIdChange(event) {
-        this.setState({ userId: event.target.value });
-    }
-    handleNameChange(event) {
-        this.setState({ name: event.target.value });
-    }
-    handleUserNameChange(event) {
-        this.setState({ userName: event.target.value });
-    }
-    handleEmailChange(event) {
-        this.setState({ email: event.target.value });
-    }
-    handlePhoneChange(event) {
-        this.setState({ phone: event.target.value });
-    }
-
-    onUserChange() {
-        this.setState({ users: UserStore.users });
-    }
-
-    newUser() {
-        addUser(this.state.userId, this.state.name, this.state.userName, this.state.email, this.state.phone)
-    }
+class Users extends React.Component {
 
     componentDidMount() {
-        getUsers();
-        UserStore.on('change', this.onUserChange);
+        this.props.dispatch(getUsers());
+
+        $('body').on('submit', (event) => {
+            event.preventDefault();
+
+            const userId = $('#idUser');
+            const name = $('#name');
+            const userName = $('#userName');
+            const userEmail = $('#userEmail');
+            const userPhone = $('#userPhone');
+
+            const users = addUser(userId.val(), name.val(), userName.val(), userEmail.val(), userPhone.val());
+            this.props.dispatch(users);
+
+            userId.val('');
+            name.val('');
+            userName.val('');
+            userEmail.val('');
+            userPhone.val('');
+        })
     }
 
     componentWillUnmount() {
-        UserStore.removeListener('change', this.onUserChange);
+        $('body').off('submit')
     }
 
     render() {
+        
+        if (this.props.is_loading) {
+            return <Orbitals color="#be97e8"/>
+        }
+
         return (
             <>
-                <Button class="btn_primary" onClick={this.newUser} />
+            <form action="#">
                 <ul>
-                    <li><input type="number" value={this.state.userId} onChange={this.handleUserIdChange} /></li>
-                    <li><input type="text" value={this.state.name} onChange={this.handleNameChange} /></li>
-                    <li><input type="text" value={this.state.userName} onChange={this.handleUserNameChange} /></li>
-                    <li><input type="email" value={this.state.email} onChange={this.handleEmailChange} /></li>
-                    <li><input type="number" value={this.state.phone} onChange={this.handlePhoneChange} /></li>
+                    <li><input id="idUser" type="number" placeholder="User id" /></li>
+                    <li><input id="name" type="text" placeholder="User's name" /></li>
+                    <li><input id="userName" type="text" placeholder="UserName" /></li>
+                    <li><input id="userEmail" type="email" placeholder="Email" /></li>
+                    <li><input id="userPhone" type="number" placeholder="Phone" /></li>
                 </ul>
-                
-                <UsersList users={this.state.users} />
+                <Button class="btn_primary">Добавить пользователя</Button>
+            </form>
+
+                <UsersList users={this.props.users} />
             </>
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        users: state.users.users,
+        is_loading: state.users.is_loading
+    }
+}
+
+export default connect(mapStateToProps)(Users); 
