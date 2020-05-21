@@ -1,18 +1,18 @@
 @import 'variables';
 
-.main-footer {
-    color: $primary-color;
-    background-color: $primary-bg;
-    padding: $s-space $l-space;
-    z-index: -10;
+footer {
+    margin-top: auto;
+}
 
-    &_sticky {
-        position: sticky;
-        bottom: 0;
-    }
+.main-footer {
+    height: 60px;
+    color: $primary-color;
+    background-color: #3C444C;
 
     &__container {
-        margin-bottom: $l-space;
+        width: calc(100vw - 50px);
+        max-width: $max-width;
+        margin: 0 auto;
     }
 
     &__header_indent-b_s {

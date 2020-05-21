@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
         return (
             <>
                 <Navbar />
-                <main className="main-content main-content_space-g_l">
+                <main className="main-content">
                     {this.props.children}
                 </main>
                 <Footer />

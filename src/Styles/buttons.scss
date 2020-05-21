@@ -2,39 +2,22 @@
 
 .btn {
     display: inline-block;
-    min-height: 30px;
+    min-height: 40px;
     width: auto;
     padding: 3px 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
+    font-size: $s-fontSize;
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    color: #222;
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: $radius;
+    color: $primary-color;
+    background: $gradient-color;
+    border-radius: 20px;
+    border: 0;
     transition:  all .08s linear;
 
     &:hover {
         transform: scale(1.05);
         box-shadow: $primary-shadow;
-    }
-
-    &_primary {
-        color: $primary-color;
-        background-color: $primary-bg;
-    }
-    &_accent {
-        color: $secondary-color;
-        background-color: $accent-bg;
-    }
-    &_alert {
-        color: $primary-color;
-        background-color: $alert-bg;
-    }
-    &_large {
-        height: 50px;
     }
 }

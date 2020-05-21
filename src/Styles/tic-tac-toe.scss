@@ -74,11 +74,11 @@ $square-size: 150px;
     
         p {
             font-size: $l-fontSize;
-            color: $secondary-color;
+            color: $primary-color;
             line-height: 1;
             padding-bottom: 5px;
             margin-bottom: $s-space;
-            border-bottom: $primary-border;
+            border-bottom: 2px solid $primary-bg;
         }
     
         li {

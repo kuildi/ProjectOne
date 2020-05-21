@@ -1,11 +1,9 @@
 @import 'variables';
 
-@mixin transform($value) {
-    -webkit-transform: $value;
-    -moz-transform: $value;
-    -ms-transform: $value;
-    -o-transform: $value;
-    transform: $value;
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 * {
@@ -15,10 +13,13 @@
 }
 
 body {
-    height: 100vh;
     font-family: $fontFamily;
-    font-size: $fontSize;
+    font-size: $m-fontSize;
     color: $primary-color;
+    background-color: #30363D;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: .5px;
     position: relative;
     z-index: 0;
 }
@@ -31,6 +32,10 @@ h2 {
     font-size: $l-fontSize;
 }
 
+h1, h2 {
+    margin-bottom: 15px;
+}
+
 a {
     display: inline-block;
     color: $primary-color;
@@ -41,21 +46,46 @@ a {
     }
 }
 
-.skew {
-    @include transform(skewX(-15deg));
+.link-highlight {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: $gradient-color;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        transform: scaleX(1);
+        transform-origin: left center;
+        transition: transform 0.3s cubic-bezier(0.694, 0, 0.335, 1);
+        pointer-events: none;
+    }
 
-    * {
-        @include transform(skewX(15deg));
+    &:hover::before {
+        transform: scaleX(0);
+        transform-origin: right center; 
     }
 }
 
-#main {
-    background-color: rgb(47, 73, 139);
+.main-text {
+    font-size: $l-fontSize;
+    margin-bottom: $l-space;
+}
+
+.gradient-color {
+    background: $gradient-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .section {
     &_space_m {
         padding: $m-space;
+    }
+    &_space-v_xxl {
+        padding: 4 * $l-space 0;
     }
     &_cut-right {
         clip-path: $cut-down_right;
@@ -65,9 +95,22 @@ a {
     }
 }
 
+.content-wrap {
+    width: calc(100vw - 50px);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.main-bg {
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: $main-bg-image;
+}
+
 .main-content {
+    padding: $l-space 0;
+    position: relative;
     z-index: 999;
-    background-color: $primary-color;
 
     &_space-g_l {
         padding: 0 $l-space;
@@ -75,7 +118,7 @@ a {
 
     &__header {
         line-height: 1.2;
-        color: $secondary-color;
+        color: $primary-color;
     
         &_indent-b_s {
             margin-bottom: $s-space;
@@ -115,10 +158,10 @@ a {
         }
     }
     &-accent {
-        background-color: $accent-bg;
+        background-color: $second-bg;
         .text-overflow_fade::after {
             background: linear-gradient(to right, rgba(255, 255, 255, 0), 
-            $accent-bg 50%);  
+            $second-bg 50%);  
         }
     }
     &-alert {
