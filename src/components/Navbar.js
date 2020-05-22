@@ -13,7 +13,7 @@ export default class Navbar extends React.Component {
         ];
         return (
             <header className="main-header header_sticky">
-                <nav className="nav-block">
+                <nav className="nav-block content-wrap">
                     <Menu items={menuItems}></Menu>
                 </nav>
             </header>

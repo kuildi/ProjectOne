@@ -6,14 +6,7 @@ footer {
 
 .main-footer {
     height: 60px;
-    color: $primary-color;
     background-color: $secondary-bg;
-
-    &__container {
-        width: calc(100vw - 50px);
-        max-width: $max-width;
-        margin: 0 auto;
-    }
 
     &__header_indent-b_s {
         margin-bottom: $s-space;

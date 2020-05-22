@@ -6,7 +6,7 @@ export default class Footer extends React.Component {
 
         return (
             <footer className="main-footer">
-                <div className="main-footer__container">
+                <div className="content-wrap main-footer__container">
                     <ul className="nav-block">
                         <li><a className="link-highlight">Email</a></li>
                         <li><a className="link-highlight">Github</a></li>

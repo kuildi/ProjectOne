@@ -6,9 +6,6 @@
 
     nav {
         height: 100%;
-        width: calc(100vw - 50px);
-        max-width: $max-width;
-        margin: 0 auto;
     }
 }
 
@@ -18,12 +15,7 @@
     li {
         display: inline-block;
         position: relative;
-        padding-top: 23px;
-        margin-right: 20px;
-    }
-
-    ul {
-
+        margin: $m-space $m-space 0 0;
     }
 
     a {
