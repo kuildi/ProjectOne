@@ -8,13 +8,12 @@
     line-height: 1.5;
     color: $primary-bg;
     background-color: #fff;
-    border: 2px solid $second-bg;
+    border: 2px solid $gradient-color;
     border-radius: 7px;
     transition: border-color .15s ease-in-out,
                 box-shadow .25s ease-in-out;
 
     &:focus {
-        border-color: $alert-bg;
         box-shadow: $primary-shadow;
     }
 }

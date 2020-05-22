@@ -7,7 +7,7 @@ footer {
 .main-footer {
     height: 60px;
     color: $primary-color;
-    background-color: #3C444C;
+    background-color: $secondary-bg;
 
     &__container {
         width: calc(100vw - 50px);

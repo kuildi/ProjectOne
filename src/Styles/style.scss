@@ -16,7 +16,7 @@ body {
     font-family: $fontFamily;
     font-size: $m-fontSize;
     color: $primary-color;
-    background-color: #30363D;
+    background-color: $primary-bg;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: .5px;
@@ -81,17 +81,17 @@ a {
 }
 
 .section {
-    &_space_m {
-        padding: $m-space;
-    }
     &_space-v_xxl {
         padding: 4 * $l-space 0;
     }
-    &_cut-right {
-        clip-path: $cut-down_right;
+    &_min-height {
+        height: calc(100vh - 200px);
+        min-height: 430px;
     }
-    &_cut-left {
-        clip-path: $cut-down_left;
+    @media screen and (max-width: 1024px) {
+        &_min-height {
+            height: 100%;
+        }
     }
 }
 
@@ -108,9 +108,15 @@ a {
 }
 
 .main-content {
-    padding: $l-space 0;
+    margin: $l-space 0;
     position: relative;
     z-index: 999;
+
+    @media screen and (max-width: 1024px) {
+        & {
+            margin: 0;
+        }
+    }
 
     &_space-g_l {
         padding: 0 $l-space;
@@ -126,51 +132,8 @@ a {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .main-content {
-        padding: 0;
-    }
-}
-
 .text-center {
     text-align: center;
-}
-
-.text-overflow_fade {
-    &::after {
-        content: "";
-        width: 70%;
-        height: 22px;
-        position: absolute;
-        bottom: 7px;
-        right: 0;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), 
-                  rgba(255, 255, 255, 1) 50%);
-    }
-}
-
-.bg {
-    &-primary {
-        background-color: $primary-bg;
-        .text-overflow_fade::after {
-            background: linear-gradient(to right, rgba(255, 255, 255, 0), 
-            $primary-bg 50%);  
-        }
-    }
-    &-accent {
-        background-color: $second-bg;
-        .text-overflow_fade::after {
-            background: linear-gradient(to right, rgba(255, 255, 255, 0), 
-            $second-bg 50%);  
-        }
-    }
-    &-alert {
-        background-color: $alert-bg;
-        .text-overflow_fade::after {
-            background: linear-gradient(to right, rgba(255, 255, 255, 0), 
-            $alert-bg 50%);  
-        }
-    }
 }
 
 .hoverable{
