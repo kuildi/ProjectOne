@@ -5,7 +5,7 @@ export default class Navbar extends React.Component {
     render() {
         const menuItems = [
             { id: "main", href: "/", title: "Главная" },
-            { id: "football", href: "/football", title: "Умения" },
+            { id: "skills", href: "/skills", title: "Умения" },
             { id: "gallery", href: "/gallery", title: "Обо мне" },
             // { id: "users", href: "/users", title: "Пользователи" },
             // { id: "posts", href: "/posts", title: "Посты" },

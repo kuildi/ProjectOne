@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
         return (
             <>
                 <Navbar />
-                <main className="main-bg main-content">
+                <main className="main-bg main-content section_min-height">
                     {this.props.children}
                 </main>
                 <Footer />

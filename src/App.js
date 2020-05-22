@@ -13,7 +13,7 @@ import './Styles/tic-tac-toe.scss';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Layout from './Layouts/Layout';
 import Main from './Pages/Main';
-import Football from './Pages/Football';
+import Skills from './Pages/Skills';
 import Users from './Pages/Users';
 import User from './Pages/User';
 import Contacts from './Pages/Contacts';
@@ -33,7 +33,7 @@ ReactDOM.render(
 			<Layout>
 				<Switch>
 					<Route exact path='/' component={Main} />
-					<Route path="/football" component={Football} />
+					<Route path="/skills" component={Skills} />
 					<Route
 						path="/users"
 						render={({ match: { url } }) => (

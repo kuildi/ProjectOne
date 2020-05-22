@@ -1,8 +1,9 @@
 import React from 'react';
 import Posts from '../components/Posts';
 import Game from '../components/tic-tac-toe';
+import SkillTile from '../components/SkillTile';
 
-export default class Football extends React.Component {
+export default class Skills extends React.Component {
 
     render() {
         const articleItems = [
@@ -16,10 +17,25 @@ export default class Football extends React.Component {
         ];
 
         return (
-            <article className="row center">
-                <h1 className="main-content__header main-content__header_indent-b_s">Football posts</h1>
-                <Posts items={articleItems}/>
-                <Game />
+            <article className="content-wrap section_space-v_l">
+                <h1 className="gradient-color">Skills</h1>
+                <section className="grid-container">
+                    <SkillTile>HTML5</SkillTile>
+                    <SkillTile>CSS3</SkillTile>
+                    <SkillTile>JavaScript</SkillTile>
+                    <SkillTile>React</SkillTile>
+                    <SkillTile>Redux</SkillTile>
+                    <SkillTile>HTML5</SkillTile>
+                    <SkillTile>CSS3</SkillTile>
+                    <SkillTile>JavaScript</SkillTile>
+                    <SkillTile>React</SkillTile>
+                    <SkillTile>Redux</SkillTile>
+                    <SkillTile>HTML5</SkillTile>
+                    <SkillTile>CSS3</SkillTile>
+                    <SkillTile>JavaScript</SkillTile>
+                    <SkillTile>React</SkillTile>
+                    <SkillTile>Redux</SkillTile>
+                </section>
             </article>
         );
     }
