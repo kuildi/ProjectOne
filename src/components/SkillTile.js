@@ -6,43 +6,70 @@ export default class Skills extends React.Component {
     constructor(props) {
         super(props)
 
-        this.openTile = this.openTile.bind(this);
     }
 
-    openTile() {
-        var $cell = $('.tile');
-        //open and close tile when clicked on tile
-        $cell.find('.js-expander').click(function (e) {
-            e.preventDefault();
-
-            var $thisCell = $(this).closest('.tile');
-
-            if ($thisCell.hasClass('is-collapsed')) {
-                $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
-                $thisCell.removeClass('is-collapsed').addClass('is-expanded');
-
-                if ($cell.not($thisCell).hasClass('is-inactive')) {
-                    //do nothing
-                } else {
-                    $cell.not($thisCell).addClass('is-inactive');
-                }
-
-            } else {
-                $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-                $cell.not($thisCell).removeClass('is-inactive');
-            }
-        });  
-    }
 
     render() {
+        switch (this.props.tileId) {
+            case 'HTML': {
+                var expandedContent = 'HTML5 marckup languege'
+                break;
+            }
+            case 'CSS': {
+                expandedContent = 'CSS3 style languege'
+                break;
+            }
+            case 'JS': {
+                expandedContent = 'JavaScript'
+                break;
+            }
+            case 'React': {
+                expandedContent = 'React is strong'
+                break;
+            }
+            case 'Redux': {
+                expandedContent = 'Redux'
+                break;
+            }
+            case 'Webpack': {
+                expandedContent = 'Webpack'
+                break;
+            }
+            case 'Git': {
+                expandedContent = 'git'
+                break;
+            }
+            case 'Design': {
+                expandedContent = 'For makets'
+                break;
+            }
+            case 'Bootstrap': {
+                expandedContent = 'Bootstrap and materialize'
+                break;
+            }
+            case 'Responsive': {
+                expandedContent = 'responsive'
+                break;
+            }
+            case 'Bem': {
+                expandedContent = 'Bem from yandex'
+                break;
+            }
+            case 'Compability': {
+                expandedContent = 'compability'
+                break;
+            }
+        }
+
         return (
-            <div className="tile is-collapsed" onClick={this.openTile}>
+            <div className="tile is-collapsed" id={this.props.tileId}>
                 <section className="tile__inner js-expander">
                     <div className={"icon " + this.props.iconClass}></div>
                     <p>{this.props.children}</p>
                 </section>
                 <section className="tile__expander">
-                    <p className="js-collapser">Expander</p>
+                    {/* <p className="js-collapser">Expander</p> */}
+                    {expandedContent}
                 </section>
             </div>
         );
