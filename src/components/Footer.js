@@ -10,6 +10,8 @@ export default class Footer extends React.Component {
                     <ul className="nav-block">
                         <li><a className="link-highlight">Email</a></li>
                         <li><a className="link-highlight">Github</a></li>
+                        <li><a className="link-highlight">LinkedIn</a></li>
+                        <li><a className="link-highlight">VK</a></li>
                     </ul>
                 </div>
             </footer>
