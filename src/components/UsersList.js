@@ -15,7 +15,7 @@ export default class UsersList extends React.Component {
         })
 
         return (
-            <section className="grid-main grid-container_space-v_m">
+            <section className="grid-container">
                 {users}
             </section>
         );

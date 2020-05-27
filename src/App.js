@@ -8,6 +8,7 @@ import './Styles/grids.scss';
 import './Styles/inputs.scss';
 import './Styles/buttons.scss';
 import './Styles/cards.scss';
+import './Styles/tiles.scss';
 import './Styles/tic-tac-toe.scss';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -16,7 +17,7 @@ import Main from './Pages/Main';
 import Skills from './Pages/Skills';
 import Users from './Pages/Users';
 import User from './Pages/User';
-import Contacts from './Pages/Contacts';
+import About from './Pages/About';
 import Gallery from './Pages/Gallery';
 import Posts from './Pages/Posts';
 import PageNotFound from './Pages/PageNotFound';
@@ -43,9 +44,8 @@ ReactDOM.render(
 							</>
 						)}
 					/>
-					<Route path="/contacts" component={Contacts} />
 					<Route path="/posts" component={Posts} />
-					<Route path="/gallery" component={Gallery} />
+					<Route path="/about" component={About} />
 					<Route path="*" component={PageNotFound} />
 				</Switch>
 			</Layout>

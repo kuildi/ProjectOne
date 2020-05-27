@@ -38,12 +38,12 @@ class Users extends React.Component {
     render() {
         
         if (this.props.is_loading) {
-            return <Orbitals color="#be97e8"/>
+            return <Orbitals color="#6FCF97"/>
         }
 
         return (
             <>
-            <form action="#">
+            {/* <form action="#">
                 <ul>
                     <li><input id="idUser" type="number" placeholder="User id" /></li>
                     <li><input id="name" type="text" placeholder="User's name" /></li>
@@ -52,7 +52,7 @@ class Users extends React.Component {
                     <li><input id="userPhone" type="number" placeholder="Phone" /></li>
                 </ul>
                 <Button class="btn_primary">Добавить пользователя</Button>
-            </form>
+            </form> */}
 
                 <UsersList users={this.props.users} />
             </>

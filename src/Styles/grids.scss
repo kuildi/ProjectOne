@@ -2,13 +2,33 @@
 
 %grid-container {
    display: grid;
-   grid-gap: $m-space;
+   grid-gap: 3 * $s-space;
    grid-template-columns: repeat(3, minmax(150px, 1fr));
    grid-auto-rows: auto;
 }
 
 .grid-container {
    @extend %grid-container;
+
+   &_about {
+      grid-template-columns: repeat(5, minmax(150px, 1fr));
+      grid-template-rows: repeat(3, minmax(200px, 1fr)); 
+   }
+
+   &__section {
+      &-s {
+         grid-row: 3/4;
+         grid-column: 1/4;
+      }
+      &-m {
+         grid-row: 1/3;
+         grid-column: 1/4;
+      }
+      &-xl {
+         grid-row: 1/-1;
+         grid-column: 4/6;
+      }
+   }
 
    @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(2, minmax(150px, 1fr));
@@ -17,14 +37,6 @@
    @media screen and (max-width: 700px) {
       grid-template-columns: repeat(1, minmax(150px, 1fr));
    }
-   
-   &_masonry {
-      @extend %grid-container;
-   }
-}
-
-.open-tile {
-   grid-column: 1/-1;
 }
 
 

@@ -44,7 +44,7 @@ export default class Skills extends React.Component {
                     <SkillTile tileId="Design">Photoshop / Figma (as developer)</SkillTile>
                     <SkillTile tileId="Bootstrap">Bootstrap / Materialize</SkillTile>
                     <SkillTile tileId="Responsive">Responsive Layout</SkillTile>
-                    <SkillTile tileId="Bem">BEM Methodology (naming convention)</SkillTile>
+                    <SkillTile tileId="Bem">BEM Methodology</SkillTile>
                     <SkillTile tileId="Compability">Cross-Browser Compatibility</SkillTile>
                 </section>
             </article>

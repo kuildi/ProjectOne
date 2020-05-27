@@ -18,7 +18,7 @@ export default class User extends React.Component {
 
     render() {
         if (!this.state.user) {
-            return <Orbitals color="#be97e8" />
+            return <Orbitals color="#6FCF97" />
         }
 
         return (

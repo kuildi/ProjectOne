@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './Button';
 
 export default class Card extends React.Component {
     render() {
@@ -9,7 +8,6 @@ export default class Card extends React.Component {
                     <h3>{this.props.header}</h3>
                 </header>
                 <div className="card__content">
-                    <p>{this.props.text}</p>
                     {this.props.children}
                 </div>
             </aside>
@@ -18,6 +16,5 @@ export default class Card extends React.Component {
 }
 
 Card.defaultProps = {
- header: 'Header text',
- text: 'Default textDefault text Default text Default text Default textDefault text'       
+ header: 'Card header',
 }

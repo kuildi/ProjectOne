@@ -1,5 +1,5 @@
 import React from 'react'
-import $ from 'jquery'
+import Users from '../Pages/Users'
 
 
 export default class Skills extends React.Component {
@@ -28,7 +28,7 @@ export default class Skills extends React.Component {
                 break;
             }
             case 'Redux': {
-                expandedContent = 'Redux'
+                expandedContent = <Users></Users>;
                 break;
             }
             case 'Webpack': {
@@ -68,7 +68,6 @@ export default class Skills extends React.Component {
                     <p>{this.props.children}</p>
                 </section>
                 <section className="tile__expander">
-                    {/* <p className="js-collapser">Expander</p> */}
                     {expandedContent}
                 </section>
             </div>

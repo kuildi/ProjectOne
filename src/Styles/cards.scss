@@ -10,17 +10,23 @@
     &__header {
         font-size: 20px;
         color: #fff;
-        padding: $s-space;
-        border-bottom: 2px solid $gradient-color;
+        padding: $s-space $m-space;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     &__content {
         width: 100%;
         max-height: 100%;
         position: relative;
-        padding: $s-space;
+        padding: $s-space $m-space;
         line-height: 20px;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        section {
+            display: flex;
+            align-items: center;
+            margin-bottom: $s-space;
+        }
     }
 }

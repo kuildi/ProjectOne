@@ -6,10 +6,7 @@ export default class Navbar extends React.Component {
         const menuItems = [
             { id: "main", href: "/", title: "Главная" },
             { id: "skills", href: "/skills", title: "Умения" },
-            { id: "gallery", href: "/gallery", title: "Обо мне" },
-            // { id: "users", href: "/users", title: "Пользователи" },
-            // { id: "posts", href: "/posts", title: "Посты" },
-            // { id: "contacts", href: "/contacts", title: "Контакты" },
+            { id: "about", href: "/about", title: "Обо мне" }
         ];
         return (
             <header className="main-header header_sticky">
