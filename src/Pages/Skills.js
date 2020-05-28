@@ -34,18 +34,18 @@ export default class Skills extends React.Component {
             <article className="content-wrap section_space-v_l">
                 <h1 className="gradient-color">Skills</h1>
                 <section className="tiles">
-                    <SkillTile tileId="HTML">HTML5</SkillTile>
-                    <SkillTile tileId="CSS">CSS3 / SASS</SkillTile>
-                    <SkillTile tileId="JS">JavaScript / JQuery</SkillTile>
-                    <SkillTile tileId="React">React.js</SkillTile>
-                    <SkillTile tileId="Redux">Redux</SkillTile>
-                    <SkillTile tileId="Webpack">Webpack</SkillTile>
-                    <SkillTile tileId="Git">Git</SkillTile>
-                    <SkillTile tileId="Design">Photoshop / Figma (as developer)</SkillTile>
-                    <SkillTile tileId="Bootstrap">Bootstrap / Materialize</SkillTile>
-                    <SkillTile tileId="Responsive">Responsive Layout</SkillTile>
-                    <SkillTile tileId="Bem">BEM Methodology</SkillTile>
-                    <SkillTile tileId="Compability">Cross-Browser Compatibility</SkillTile>
+                    <SkillTile tileId="HTML" iconClass="icon_html">HTML5</SkillTile>
+                    <SkillTile tileId="CSS" iconClass="icon_css">CSS3 / SASS</SkillTile>
+                    <SkillTile tileId="JS" iconClass="icon_js">JavaScript / JQuery</SkillTile>
+                    <SkillTile tileId="React" iconClass="icon_react">React.js</SkillTile>
+                    <SkillTile tileId="Redux" iconClass="icon_redux">Redux</SkillTile>
+                    <SkillTile tileId="Webpack" iconClass="icon_webpack">Webpack</SkillTile>
+                    <SkillTile tileId="Git" iconClass="icon_git">Git</SkillTile>
+                    <SkillTile tileId="Design" iconClass="icon_design">Photoshop / Figma (as developer)</SkillTile>
+                    <SkillTile tileId="Bootstrap" iconClass="icon_bootstrap">Bootstrap / Materialize</SkillTile>
+                    <SkillTile tileId="Responsive" iconClass="icon_responsive">Responsive Layout</SkillTile>
+                    <SkillTile tileId="Bem" iconClass="icon_bem">BEM Methodology</SkillTile>
+                    <SkillTile tileId="Compability" iconClass="icon_compability">Cross-Browser Compatibility</SkillTile>
                 </section>
             </article>
         );
