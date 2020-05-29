@@ -187,10 +187,19 @@ img {
         background-image: $git-icon;
     }
     &_design {
-        background-image: $git-icon;
+        background-image: $design-icon;
     }
     &_bootstrap {
         background-image: $bootstrap-icon;
+    }
+    &_bem {
+        background-image: $bem-icon;
+    }
+    &_responsive {
+        background-image: $responsive-icon;
+    }
+    &_compability {
+        background-image: $compability-icon;
     }
 }
 .flex-container {

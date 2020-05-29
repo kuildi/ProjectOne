@@ -32,7 +32,7 @@ export default class Skills extends React.Component {
 
         return (
             <article className="content-wrap section_space-v_l">
-                <h1 className="gradient-color">Skills</h1>
+                <h1 className="gradient-color">Умения</h1>
                 <section className="tiles">
                     <SkillTile tileId="HTML" iconClass="icon_html">HTML5</SkillTile>
                     <SkillTile tileId="CSS" iconClass="icon_css">CSS3 / SASS</SkillTile>
