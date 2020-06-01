@@ -91,9 +91,7 @@ export default class Game extends React.Component {
                 'Начать сначала';
             return (
                 <li key={move}>
-                    <Button textBtn={desc} 
-                            class={`btn_primary ${(move ? '' : 'btn_alert')} `} 
-                            onClick={() => this.jumpTo(move)} />
+                    <Button onClick={() => this.jumpTo(move)}> {desc} </Button>
                 </li>
             )
         });
@@ -106,8 +104,9 @@ export default class Game extends React.Component {
         }
 
         return (
-            <article className="game grid-main grid-main_space-v_m">
-                <section className="game__board grid__item_distribute_center">
+            <article className="grid-container">
+                <p className="grid-container__section_full-w primary-text">Данные крестики нолики релизованы при помощи ReactJS, как и весь сайт.</p>
+                <section className="game__board">
                     <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
                 </section>
                 <section className="game__info">

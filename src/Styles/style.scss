@@ -68,11 +68,6 @@ a {
     }
 }
 
-.main-text {
-    font-size: $l-fontSize;
-    margin-bottom: $l-space;
-}
-
 .gradient-color {
     background: $gradient-color;
     background-clip: text;
@@ -114,10 +109,19 @@ a {
     position: relative;
     z-index: 999;
 
+    
     @media screen and (max-width: 1024px) {
         & {
             margin: 0;
         }
+    }
+}
+
+.primary-text {
+    font-size: $l-fontSize;
+    
+    &_indent-b_l {
+        margin-bottom: $l-space;
     }
 }
 

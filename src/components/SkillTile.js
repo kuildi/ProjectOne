@@ -1,5 +1,6 @@
 import React from 'react'
 import Users from '../Pages/Users'
+import Game from '../components/tic-tac-toe'
 
 
 export default class Skills extends React.Component {
@@ -24,7 +25,7 @@ export default class Skills extends React.Component {
                 break;
             }
             case 'React': {
-                expandedContent = 'React is strong'
+                expandedContent = <Game />
                 break;
             }
             case 'Redux': {
