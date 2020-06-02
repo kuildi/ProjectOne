@@ -5,7 +5,7 @@ import Button from './Button';
 function Square(props) {
     return (
         <button className="square" onClick={props.onClick}>
-            {props.value}
+            <p className="gradient-color">{props.value}</p>
         </button>
     );
 }
@@ -105,7 +105,7 @@ export default class Game extends React.Component {
 
         return (
             <article className="grid-container">
-                <p className="grid-container__section_full-w primary-text">Данные крестики нолики релизованы при помощи ReactJS, как и весь сайт.</p>
+                <p className="grid-container__section_full-w">Данные крестики нолики релизованы при помощи ReactJS, как и весь сайт.</p>
                 <section className="game__board">
                     <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
                 </section>

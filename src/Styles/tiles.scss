@@ -64,8 +64,7 @@
         transition: all 0.3s ease-in-out;
         
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
 
         z-index: 99;
     }

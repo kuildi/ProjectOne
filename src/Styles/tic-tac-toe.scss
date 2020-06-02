@@ -1,23 +1,23 @@
 @import 'variables';
 
-$square-size: 150px;
+$square-size: 115px;
 
 .board-row {
 
     &:first-of-type {
         .square:nth-of-type(1) {
-            border-top-left-radius: 15px;
+            border-top-left-radius: $radius;
         }
         .square:nth-of-type(3) {
-            border-top-right-radius: 15px;
+            border-top-right-radius: $radius;
         }
     }
     &:last-of-type {
         .square:nth-of-type(1) {
-            border-bottom-left-radius: 15px;
+            border-bottom-left-radius: $radius;
         }
         .square:nth-of-type(3) {
-            border-bottom-right-radius: 15px;
+            border-bottom-right-radius: $radius;
         }
     }
 }
@@ -29,38 +29,25 @@ $square-size: 150px;
 .square {
     width: 33.3%;
     height: $square-size;
-    background: #fff;
-    border: 1px solid #999;
+    background-color: $secondary-bg;
+    border: 1px solid rgba($color: #fff, $alpha: .1);
     float: left;
-    font-size: 50px;
+    font-size: $xl-fontSize;
     font-weight: bold;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
 
-    @media screen and (max-width: 1200px) {
-        $square-size: 120px;
-        & {
-           height: $square-size;
-        }
-     }
     @media screen and (max-width: 1024px) {
-        $square-size: 180px;
         & {
-           height: $square-size;
+            height: $square-size;
         }
-     }
+    }
 }
 
 .square:focus {
     outline: none;
-}
-
-.kbd-navigation {
-    .square:focus {
-        background: #cec8c8;
-    }
 }
 
 .game {
@@ -73,7 +60,6 @@ $square-size: 150px;
     &__info {
     
         p {
-            font-size: $l-fontSize;
             color: $primary-color;
             line-height: 1;
             padding-bottom: 5px;

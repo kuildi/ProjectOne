@@ -24,6 +24,10 @@ body {
     z-index: 0;
 }
 
+ol {
+    list-style: inside;
+}
+
 h1 {
     font-size: $xl-fontSize;
 }
