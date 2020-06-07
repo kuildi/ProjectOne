@@ -5,7 +5,11 @@ import Game from '../components/tic-tac-toe'
 
 export default class Skills extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+
+        this.state = {
+            isExpanded: false
+        }
 
     }
 
@@ -63,13 +67,14 @@ export default class Skills extends React.Component {
         }
 
         return (
-            <div className="tile is-collapsed" id={this.props.tileId}>
+            <div className="tile is-collapsed" id={this.props.tileId}
+                onClick={() => { this.setState({ isExpanded: !this.state.isExpanded }) }}>
                 <section className="tile__inner js-expander">
                     <div className={"icon " + this.props.iconClass}></div>
                     <p>{this.props.children}</p>
                 </section>
                 <section className="tile__expander">
-                    {expandedContent}
+                    {this.state.isExpanded ? expandedContent : ''}
                 </section>
             </div>
         );
