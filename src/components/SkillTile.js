@@ -10,9 +10,12 @@ export default class Skills extends React.Component {
         this.state = {
             isExpanded: false
         }
-
+        this.expandTile = this.expandTile.bind(this);
     }
 
+    expandTile () {
+        this.setState({ isExpanded: !this.state.isExpanded })
+    }
 
     render() {
         switch (this.props.tileId) {
@@ -67,9 +70,8 @@ export default class Skills extends React.Component {
         }
 
         return (
-            <div className="tile is-collapsed" id={this.props.tileId}
-                onClick={() => { this.setState({ isExpanded: !this.state.isExpanded }) }}>
-                <section className="tile__inner js-expander">
+            <div className="tile is-collapsed" id={this.props.tileId}>
+                <section className="tile__inner js-expander" onClick={this.expandTile}>
                     <div className={"icon " + this.props.iconClass}></div>
                     <p>{this.props.children}</p>
                 </section>

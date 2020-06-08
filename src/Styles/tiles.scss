@@ -131,8 +131,6 @@
     }
 }
 
-//Expander Widths
-//when 3 tiles in a row
 @media screen and (min-width: 992px) {
     .tile:nth-of-type(3n+2) .tile__expander {
         margin-left: calc(-100% - 30px);
@@ -148,7 +146,6 @@
     }
 }
 
-//when 2 tiles in a row
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .tile:nth-of-type(2n+2) .tile__expander {
         margin-left: calc(-100% - 30px);

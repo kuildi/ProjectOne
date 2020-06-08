@@ -29,15 +29,16 @@ ol {
 }
 
 h1 {
-    font-size: $xl-fontSize;
+    font-size: 3.5em;
 }
 
 h2 {
-    font-size: $l-fontSize;
+    font-size: 3em;
 }
 
 h1, h2 {
     margin-bottom: 15px;
+    line-height: 1.2em;
 }
 
 a {
@@ -83,15 +84,15 @@ a {
     &_space-v_l {
         padding: $l-space 0;
     }
-    &_space-top_xxl {
-        padding-top: 4 * $l-space;
+    &_space-v_xl {
+        padding: 2 * $l-space 0;
     }
     &_min-height {
         min-height: calc(100vh - 200px);
     }
     @media screen and (max-width: 1024px) {
         &_min-height {
-            height: 100%;
+            min-height: calc(100vh - 120px);
         }
     }
 }
@@ -102,9 +103,9 @@ a {
     margin: 0 auto;
 }
 .main-bg {
-    background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-image: $main-bg-image;
 }
 
@@ -214,4 +215,18 @@ img {
     display: flex;
     flex-wrap: wrap;
     grid-gap: $m-space;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .primary-text {
+        font-size: 1.2em;
+    }
 }
