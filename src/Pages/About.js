@@ -4,7 +4,7 @@ import Button from '../components/Button'
 export default function About() {
     return (
         <article className="content-wrap section_space-v_l">
-            <section className="grid-container grid-container_about">
+            <section className="grid-container grid-container_about grid-container_indent-b_l">
                 <div className="grid-container__section_xl tile_about">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magnam nobis nihil exercitationem ab error voluptatem repudiandae magni beatae quibusdam velit corrupti animi quia dolorum, accusamus dicta rerum, explicabo perferendis.</p>
                 </div>
@@ -14,8 +14,8 @@ export default function About() {
                 <div className="grid-container__section_s tile_about">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dolores. Libero similique tempora tempore ipsum aut, ullam alias voluptas id quia commodi illum repellendus assumenda mollitia neque. Quos, nesciunt quod.</p>
                 </div>
-                <Button>Contact me</Button>
             </section>
+            <Button icon="mail">Contact me</Button>
         </article>
     );
 }

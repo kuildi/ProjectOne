@@ -5,9 +5,12 @@ import Button from '../components/Button';
 export default function Main() {
     return (
         <article className="content-wrap section_space-v_xl">
-            <h1><span className="gradient-color">Hello,</span> I’m Kuznetsov Ilya - </h1>
-            <p className="primary-text primary-text_indent-b_l">I’m a HTML developer based in Volgograd, Russia, currently working on frontend of Cloud-Control app at Danfoss Russia </p>
-            <Button>
+            <h1><span className="gradient-color">Здравствуйте,</span> я Кузнецов Илья - </h1>
+            <p className="primary-text primary-text_indent-b_l">
+                Начинающий фронтенд разработчик из Волгограда.
+                <br/> В настоящее время работаю над версткой в компании Danfoss.
+            </p>
+            <Button icon="chevrone">
                 <Link to={`/skills`}>Look at my skills</Link>
             </Button>
         </article>

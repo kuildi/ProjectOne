@@ -32,6 +32,10 @@
          grid-column: 1/-1;
       }
    }
+   
+   &_indent-b_l {
+      margin-bottom: $l-space;
+   }
 
    @media screen and (min-width: 769px) and (max-width: 1024px) {
       grid-template-columns: repeat(2, minmax(150px, 1fr));
