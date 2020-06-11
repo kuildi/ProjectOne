@@ -1,5 +1,4 @@
 import * as ConstantUsers from '../constants/userConstants';
-// import merge from 'lodash/merge';
 
 export function usersReducer(state = {users: [], is_loading: false}, action) {
 	switch(action.type) {
