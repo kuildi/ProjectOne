@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Provider } from 'react-redux';
 import store from './store'
 
@@ -22,21 +23,16 @@ import Users from './Pages/Users';
 import About from './Pages/About';
 import PageNotFound from './Pages/PageNotFound';
 
+import AnimatedSwitch from './components/AnimatedSwitch';
+
 
 const app = document.getElementById('root');
-
 
 ReactDOM.render(
 	<Provider store={store}>
 		<Router>
 			<Layout>
-				<Switch>
-					<Route exact path='/' component={Main} />
-					<Route path="/skills" component={Skills} />
-					<Route path="/users" component={Users} />
-					<Route path="/about" component={About} />
-					<Route path="*" component={PageNotFound} />
-				</Switch>
+				<AnimatedSwitch />
 			</Layout>
 		</Router>
 	</Provider>,
