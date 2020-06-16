@@ -6,10 +6,10 @@ import Button from '../components/Button';
 export default function About() {
     React.useEffect(() => {
         lottie.loadAnimation({
-          container: document.querySelector("#animated-img"),
-          animationData: animation
+            container: document.querySelector("#animated-img"),
+            animationData: animation
         });
-      }, []);
+    }, []);
 
     return (
         <article className="content-wrap section_space-v_l">
@@ -25,7 +25,9 @@ export default function About() {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dolores. Libero similique tempora tempore ipsum aut, ullam alias voluptas id quia commodi illum repellendus assumenda mollitia neque. Quos, nesciunt quod.</p>
                 </div>
             </section>
-            <Button icon="mail">Contact me</Button>
+            <a href="mailto:kuildi@yandex.ru">
+                <Button icon="mail">Связаться со мной</Button>
+            </a>
         </article>
     );
 }
