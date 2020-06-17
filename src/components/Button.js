@@ -1,10 +1,11 @@
 import React from 'react';
+import Icon from './Icon'
 
 export default function Button(props) {
     return (
         <button className="btn" onClick={props.onClick}>
             {props.children}
-            <div className={`btn__icon btn__icon_${props.icon}`}></div>
+            <Icon class="btn__icon" name={props.icon} />
         </button>
     );
 }

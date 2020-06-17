@@ -11,7 +11,7 @@ export default function Main() {
                 <br /> В настоящее время работаю над версткой в компании Danfoss.
             </p>
             <Link to={`/skills`}>
-                <Button icon="chevrone">Мои навыки</Button>
+                <Button icon="chevron-right">Мои навыки</Button>
             </Link>
         </article>
     );

@@ -1,6 +1,7 @@
 import React from 'react'
 import Users from '../Pages/Users'
 import Game from '../components/tic-tac-toe'
+import Icon from './Icon'
 
 
 export default class Skills extends React.Component {
@@ -72,7 +73,7 @@ export default class Skills extends React.Component {
         return (
             <div className="tile is-collapsed" id={this.props.tileId}>
                 <section className="tile__inner js-expander" onClick={this.expandTile}>
-                    <div className={"icon " + this.props.iconClass}></div>
+                    <Icon class="tile__inner__icon" name={this.props.iconClass} />
                     <p>{this.props.children}</p>
                 </section>
                 <section className="tile__expander">

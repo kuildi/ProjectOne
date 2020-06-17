@@ -26,18 +26,18 @@ export default class Skills extends React.Component {
     render() {
 
         const skillsData = [
-            { id: "HTML", icon: "icon_html", title: "HTML5" },
-            { id: "CSS", icon: "icon_css", title: "CSS3 / SASS" },
-            { id: "JS", icon: "icon_js", title: "JavaScript / JQuery" },
-            { id: "React", icon: "icon_react", title: "React.js" },
-            { id: "Redux", icon: "icon_redux", title: "Redux" },
-            { id: "Webpack", icon: "icon_webpack", title: "Webpack" },
-            { id: "Git", icon: "icon_git", title: "Git" },
-            { id: "Design", icon: "icon_design", title: "Photoshop / Figma (as developer)" },
-            { id: "Bootstrap", icon: "icon_bootstrap", title: "Bootstrap / Materialize" },
-            { id: "Responsive", icon: "icon_responsive", title: "Responsive Layout" },
-            { id: "Bem", icon: "icon_bem", title: "BEM Methodology" },
-            { id: "Compability", icon: "icon_compability", title: "Cross-Browser Compatibility" }
+            { id: "HTML", icon: "html5", title: "HTML5" },
+            { id: "CSS", icon: "css3", title: "CSS3 / SASS" },
+            { id: "JS", icon: "JS", title: "JavaScript / JQuery" },
+            { id: "React", icon: "react", title: "React.js" },
+            { id: "Redux", icon: "redux", title: "Redux" },
+            { id: "Webpack", icon: "webpack", title: "Webpack" },
+            { id: "Git", icon: "git", title: "Git" },
+            { id: "Design", icon: "photoshop", title: "Photoshop / Figma (as developer)" },
+            { id: "Bootstrap", icon: "bootstrap", title: "Bootstrap / Materialize" },
+            { id: "Responsive", icon: "responsive", title: "Responsive Layout" },
+            { id: "Bem", icon: "bem", title: "BEM Methodology" },
+            { id: "Compability", icon: "IE", title: "Cross-Browser Compatibility" }
         ];
 
         let skills = skillsData.map((skill, index) => {
