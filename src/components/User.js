@@ -1,21 +1,26 @@
 import React from 'react'
 import Card from './Card'
+import Icon from './Icon'
 
 
 export default function User(props) {
     return (
         <Card header={props.name} >
             <section>
-                <div className="icon"></div>{props.username}
+                <Icon class='card__icon' name='profile' />
+                {props.username}
             </section>
             <section>
-                <div className="icon"></div>{props.email}
+                <Icon class='card__icon' name='mail_gradient' />
+                {props.email}
             </section>
             <section>
-                <div className="icon"></div>{props.phone}
+                <Icon class='card__icon' name='phone' />
+                {props.phone}
             </section>
             <section>
-                <div className="icon"></div>{props.website}
+                <Icon class='card__icon' name='web' />
+                {props.website}
             </section>
         </Card>
     );
