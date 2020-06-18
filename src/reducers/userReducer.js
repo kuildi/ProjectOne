@@ -14,14 +14,6 @@ export function usersReducer(state = {users: [], is_loading: false}, action) {
 			state = {...state, is_loading: false, error_message: action.payload.message};
 			break;
 		}
-		case ConstantUsers.ADD_USER: {
-			state = {
-				...state, 
-				is_loading: false, 
-				users: [...state.users, action.payload]
-			};
-			break;
-		}
 	}
 	return state;
 }

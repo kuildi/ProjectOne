@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './store'
 
@@ -17,11 +16,6 @@ import './Styles/tiles.scss';
 import './Styles/tic-tac-toe.scss';
 
 import Layout from './Layouts/Layout';
-import Main from './Pages/Main';
-import Skills from './Pages/Skills';
-import Users from './Pages/Users';
-import About from './Pages/About';
-import PageNotFound from './Pages/PageNotFound';
 
 import AnimatedSwitch from './components/AnimatedSwitch';
 
