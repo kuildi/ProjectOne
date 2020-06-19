@@ -1,13 +1,12 @@
 import React from 'react'
-import { Orbitals } from 'react-spinners-css'
+import Loader from '../components/Loader'
 import User from './User'
 
 export default class UsersList extends React.Component {
 
     render() {
         if (!this.props.users.length) {
-            return (
-                <Orbitals color="#be97e8" />)
+            return <Loader />
         }
 
         let users = this.props.users.map((user, index) => {

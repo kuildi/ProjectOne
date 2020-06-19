@@ -6,14 +6,8 @@ import store from './store'
 
 import './Styles/reset.scss';
 import './Styles/style.scss';
-import './Styles/header.scss';
-import './Styles/footer.scss';
 import './Styles/grids.scss';
-import './Styles/inputs.scss';
-import './Styles/buttons.scss';
-import './Styles/cards.scss';
-import './Styles/tiles.scss';
-import './Styles/tic-tac-toe.scss';
+
 
 import Layout from './Layouts/Layout';
 

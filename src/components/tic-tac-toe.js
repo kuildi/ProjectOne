@@ -1,6 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Button from './Button';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Button from './Button'
+
+import '../Styles/tic-tac-toe.scss'
 
 function Square(props) {
     return (

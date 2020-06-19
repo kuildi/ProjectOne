@@ -1,9 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addUser, getUsers } from '../actions/userActions'
+import { getUsers } from '../actions/userActions'
 import UsersList from '../components/UsersList'
-import { Orbitals } from 'react-spinners-css'
-
+import Loader from '../components/Loader'
 class Users extends React.Component {
 
     componentDidMount() {
@@ -13,7 +12,7 @@ class Users extends React.Component {
     render() {
         
         if (this.props.is_loading) {
-            return <Orbitals color="#6FCF97"/>
+            return <Loader />
         }
 
         return (

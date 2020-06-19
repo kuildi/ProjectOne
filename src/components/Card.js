@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-export default function Card (props) {
+import '../Styles/cards.scss'
+
+const Card = (props) => {
     return (
         <aside className={"card hoverable bg-alert " + props.class}>
             <header className="card__header">
@@ -12,6 +14,8 @@ export default function Card (props) {
         </aside>
     );
 }
+
+export default Card
 
 Card.defaultProps = {
     header: 'Card header',
