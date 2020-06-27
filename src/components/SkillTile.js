@@ -14,14 +14,16 @@ export default class Skills extends React.Component {
         this.expandTile = this.expandTile.bind(this);
     }
 
-    expandTile () {
+    expandTile() {
         this.setState({ isExpanded: !this.state.isExpanded })
     }
 
     render() {
         switch (this.props.tileId) {
             case 'HTML': {
-                var expandedContent = 'HTML5 marckup languege'
+                var expandedContent = `Данный язык используется мной для базового представления и структурирования 
+                                       содержимого сайтов. В своей работе я предпочитаю использовать стандарт HTML5 для более точного описания содержимого страниц,
+                                       что способствует улучшению приоритезации контента сайта.`
                 break;
             }
             case 'CSS': {

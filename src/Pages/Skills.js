@@ -13,7 +13,7 @@ export default class Skills extends React.Component {
             var $thisCell = $(this).closest('.tile');
 
             if ($thisCell.hasClass('is-collapsed')) {
-                $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
+                $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed is-inactive');
                 $thisCell.removeClass('is-collapsed').addClass('is-expanded');
 
                 $cell.not($thisCell).hasClass('is-inactive') ?
@@ -35,11 +35,11 @@ export default class Skills extends React.Component {
             { id: "Redux", icon: "redux", title: "Redux" },
             { id: "Webpack", icon: "webpack", title: "Webpack" },
             { id: "Git", icon: "git", title: "Git" },
-            { id: "Design", icon: "photoshop", title: "Photoshop / Figma (as developer)" },
+            { id: "Design", icon: "photoshop", title: "Photoshop / Figma (как разработчик)" },
             { id: "Bootstrap", icon: "bootstrap", title: "Bootstrap / Materialize" },
-            { id: "Responsive", icon: "responsive", title: "Responsive Layout" },
-            { id: "Bem", icon: "bem", title: "BEM Methodology" },
-            { id: "Compability", icon: "IE", title: "Cross-Browser Compatibility" }
+            { id: "Responsive", icon: "responsive", title: "Адаптивная верстка" },
+            { id: "Bem", icon: "bem", title: "БЭМ методология" },
+            { id: "Compability", icon: "IE", title: "Кроссбраузерная верстка" }
         ];
 
         let skills = skillsData.map((skill, index) => {
