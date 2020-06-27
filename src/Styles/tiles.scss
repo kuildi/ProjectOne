@@ -77,6 +77,10 @@
         flex-direction: column;
 
         z-index: 99;
+
+        p {
+            text-indent: $l-space;
+        }
     }
 
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
