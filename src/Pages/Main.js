@@ -6,10 +6,10 @@ export default function Main() {
     return (
         <article className="content-wrap section_space-v_xl">
             <h1><span className="gradient-color">Здравствуйте,</span> я Кузнецов Илья - </h1>
-            <p className="primary-text primary-text_indent-b_l">
+            <h2 className="primary-text_indent-b_l">
                 Начинающий фронтенд разработчик из Волгограда.
                 <br /> В настоящее время работаю над версткой в компании Danfoss.
-            </p>
+            </h2>
             <Link to={`/skills`}>
                 <Button icon="chevron-right">Мои навыки</Button>
             </Link>

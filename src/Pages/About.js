@@ -15,17 +15,21 @@ export default function About() {
         <article className="content-wrap section_space-v_l">
             <section className="grid-container grid-container_about grid-container_indent-b_l">
                 <div className="grid-container__section_xl tile-about tile-about_flex">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magnam nobis nihil exercitationem ab error voluptatem repudiandae magni beatae quibusdam velit corrupti animi quia dolorum, accusamus dicta rerum, explicabo perferendis.</p>
+                    <p className="primary-text">
+                        Окончил ВолгГТУ, факультет электроники и вычеслительной техники по направлению “Системы автоматизированного проектирования и поискового конструирования”.
+                        Дипломный проект "Разработка интерактивного робота и веб-приложения для его управления".
+                    </p>
                     <div id="animated-img"></div>
                 </div>
                 <div className="grid-container__section_m tile-about">
-                    <p>
-                        Окончил ВолгГТУ, факультет электроники и вычеслительной техники по направлению “Системы автоматизированного проектирования и поискового конструирования”.
-                        Дипломный проект "Разработка интерактивного робота и веб-приложения для его управления"
+                    <p className="primary-text">На текущем месте отвечаю за верстку и переход проекта на новый дизайн. Координирую работу двух коллег при работе с версткой. Делаю кодревью всех задач, затрагивающих верстку и стили проекта.
+                    Занимаюсь рефакторингом стилей и внедрением семантики HTML5.
                     </p>
+                    <br/>
+                    <p className="primary-text">Так же в своей работе использую JavaScript для создания различных интерактивностей.</p>
                 </div>
                 <div className="grid-container__section_s tile-about">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dolores. Libero similique tempora tempore ipsum aut, ullam alias voluptas id quia commodi illum repellendus assumenda mollitia neque. Quos, nesciunt quod.</p>
+                    <p className="primary-text">Интересуюсь футболом, игровой индустрией и фильмами.</p>
                 </div>
             </section>
             <a href="mailto:kuildi@yandex.ru">

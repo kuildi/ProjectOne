@@ -179,7 +179,7 @@ a {
 }
 
 .primary-text {
-    font-size: $l-fontSize;
+    font-size: 1.2 * $m-fontSize;
 
     &_indent-b_l {
         margin-bottom: $l-space;
@@ -227,4 +227,12 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.text-link {
+    transition: all .3s ease-in-out;
+    color: #27CBFF;
+    &:hover {
+        color: #6FCF97;
+    }
 }

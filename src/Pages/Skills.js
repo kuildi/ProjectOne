@@ -35,7 +35,7 @@ export default class Skills extends React.Component {
             { id: "Redux", icon: "redux", title: "Redux" },
             { id: "Webpack", icon: "webpack", title: "Webpack" },
             { id: "Git", icon: "git", title: "Git" },
-            { id: "Design", icon: "photoshop", title: "Photoshop / Figma (как разработчик)" },
+            { id: "Design", icon: "photoshop", title: "Работа с макетами" },
             { id: "Bootstrap", icon: "bootstrap", title: "Bootstrap / Materialize" },
             { id: "Responsive", icon: "responsive", title: "Адаптивная верстка" },
             { id: "Bem", icon: "bem", title: "БЭМ методология" },
@@ -51,6 +51,7 @@ export default class Skills extends React.Component {
                 <h1 className="gradient-color">Умения</h1>
                 <section className="tiles">
                     {skills}
+                    <p className="primary-text">Что бы поближе познакомиться с примером моего кода, прошу заглянуть в <a className="text-link" href="https://github.com/kuildi/ProjectOne">репозитрий</a> данного сайта на Github.</p>
                 </section>
             </article>
         );
