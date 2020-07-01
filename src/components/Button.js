@@ -1,8 +1,6 @@
 import React from 'react';
 import Icon from './Icon'
 
-import '../Styles/buttons.scss';
-
 export default function Button(props) {
     return (
         <button className="btn" onClick={props.onClick}>

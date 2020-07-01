@@ -2,8 +2,6 @@ import React from 'react'
 import SkillTile from '../components/SkillTile'
 import $ from 'jquery'
 
-import '../Styles/tiles.scss'
-
 export default class Skills extends React.Component {
 
     componentDidMount() {

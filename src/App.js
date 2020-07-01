@@ -4,10 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './store'
 
-import './Styles/reset.scss';
-import './Styles/style.scss';
-import './Styles/grids.scss';
-
+import './Styles/main.scss';
 
 import Layout from './Layouts/Layout';
 

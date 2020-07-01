@@ -1,6 +1,5 @@
 import React from 'react'
 import Users from '../Pages/Users'
-import Game from '../components/tic-tac-toe'
 import Icon from './Icon'
 
 

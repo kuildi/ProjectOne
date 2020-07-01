@@ -1,7 +1,5 @@
 import React from 'react'
 
-import '../Styles/cards.scss'
-
 const Card = (props) => {
     return (
         <aside className={"card hoverable bg-alert " + props.class}>

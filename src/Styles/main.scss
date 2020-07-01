@@ -1,4 +1,15 @@
-@import 'variables';
+// Utils
+@import './Utils/variables';
+@import './Utils/reset';
+@import './Utils/grids';
+
+// Components
+@import './Components/buttons';
+@import './Components/cards';
+@import './Components/header';
+@import './Components/footer';
+@import './Components/tiles';
+
 
 #root {
     min-height: 100vh;
@@ -234,5 +245,14 @@ img {
     color: #27CBFF;
     &:hover {
         color: #6FCF97;
+    }
+}
+
+.photo {
+    max-width: 200px;
+    margin-top: $m-space;
+    
+    &_rounded {
+        border-radius: 50%;
     }
 }

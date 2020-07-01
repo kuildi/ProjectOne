@@ -1,8 +1,6 @@
 import React from 'react'
 import Menu from './Menu'
 
-import '../Styles/header.scss'
-
 const Navbar = () => {
     const menuItems = [
         { id: "main", href: "/", title: "Главная" },
