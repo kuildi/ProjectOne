@@ -10,11 +10,11 @@
 
     transition: all .3s ease-in-out;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $m-break) {
         width: calc((100% / 2) - 30px);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $s-break) {
         width: 100%;
     }
 
@@ -35,7 +35,7 @@
             flex-direction: column;
             justify-content: space-between;
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: $l-break) {
                 flex-direction: row;
                 align-items: center;
             }
@@ -146,7 +146,7 @@
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $m-break) {
     .tile:nth-of-type(3n+2) .tile__expander {
         margin-left: calc(-100% - 15px);
     }
@@ -161,7 +161,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: $s-break) and (max-width: $m-break) {
     .tile:nth-of-type(2n+2) .tile__expander {
         margin-left: calc(-100% - 15px);
     }

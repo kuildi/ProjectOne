@@ -1,5 +1,5 @@
 import React from 'react'
-import '../sprite.svg'
+import '../Icons/sprite.svg'
 
 const Icon = (props) => (
   <svg className={props.class}>
