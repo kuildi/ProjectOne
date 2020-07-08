@@ -243,16 +243,25 @@ img {
 .text-link {
     transition: all .3s ease-in-out;
     color: #27CBFF;
+
     &:hover {
         color: #6FCF97;
     }
 }
 
 .photo {
-    max-width: 200px;
-    margin-top: $m-space;
-    
-    &_rounded {
-        border-radius: 50%;
+    max-width: 500px;
+    border-radius: $radius;
+
+    filter: grayscale(1);
+    transition: filter .5s ease-in-out;
+
+    &_overlay {
+        position: absolute;
+        bottom: -50%;
+    }
+
+    &:hover {
+        filter: grayscale(0);
     }
 }

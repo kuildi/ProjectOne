@@ -26,19 +26,19 @@
     }
 
     &-about {
+        position: relative;
         padding: 15px;
-        background-color: $clear-bg;
+        background-color: $transparent-bg;
         border-radius: $radius;
 
         &_flex {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
 
-            @media screen and (max-width: $l-break) {
-                flex-direction: row;
-                align-items: center;
-            }
+        &_space-b_l {
+            padding-bottom: 8rem;
         }
 
         p {
@@ -51,7 +51,7 @@
         padding: $m-space;
         position: relative;
         cursor: pointer;
-        background-color: $clear-bg;
+        background-color: $transparent-bg;
         border-radius: $radius;
 
         display: flex;
@@ -70,7 +70,7 @@
         width: 100%;
         position: relative;
         padding: $m-space;
-        background-color: $clear-bg;
+        background-color: $transparent-bg;
         box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
         border-radius: $radius;
         transition: all .4s ease-in-out;
