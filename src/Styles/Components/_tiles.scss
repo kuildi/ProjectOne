@@ -2,13 +2,11 @@
     display: flex;
     flex-flow: row wrap;
 }
-  
+
 .tile {
     margin: 0 15px 15px 0;
     width: calc((100% / 3) - 30px);
     border-radius: $radius;
-
-    transition: all .3s ease-in-out;
 
     @media screen and (max-width: $m-break) {
         width: calc((100% / 2) - 30px);
@@ -16,13 +14,6 @@
 
     @media screen and (max-width: $s-break) {
         width: 100%;
-    }
-
-    &:hover {
-        .tile__inner {
-            transform: scale(1.05);
-            box-shadow: $primary-shadow;
-        }
     }
 
     &-about {
@@ -56,13 +47,17 @@
 
         display: flex;
         align-items: center;
-        
-        transition: all .2s ease-in-out;
-        
+
+        transition: box-shadow .4s ease-in-out;
+
         &__icon {
             width: 40px;
             height: 40px;
             margin-right: $m-space;
+        }
+
+        &:hover {
+            box-shadow: $primary-shadow;
         }
     }
 
@@ -73,15 +68,22 @@
         background-color: $transparent-bg;
         box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
         border-radius: $radius;
-        transition: all .4s ease-in-out;
-        
+
+        will-change: height, padding, opacity, margin-top;
+        transition: all .5s ease-in-out;
+
         display: flex;
         flex-direction: column;
 
         z-index: 99;
 
         p {
-            text-indent: $l-space;
+            text-indent: $m-space;
+            margin-bottom: $m-space;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         li {
@@ -90,16 +92,18 @@
     }
 
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+
         &__inner,
         &__expander,
         &-about {
-          -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
         }
+
         &__expander {
             box-shadow: none;
         }
-      }
+    }
 
     &.is-collapsed {
         .tile__inner {
@@ -108,10 +112,8 @@
                 opacity: 0;
             }
         }
+
         .tile__expander {
-            max-height: 0;
-            min-height: 0;
-            overflow: hidden;
             margin-top: 0;
             padding: 0;
             opacity: 0;
@@ -125,23 +127,8 @@
         }
 
         .tile__expander {
-            min-height: 100px;
-            overflow: visible;
             margin-top: 15px;
             opacity: 1;
-        }
-    }
-
-    &.is-inactive {
-        .tile__inner {
-            pointer-events: none;
-            opacity: 0.5;
-        }
-        
-        &:hover {
-            .tile__inner {
-                transform: scale(1);
-            }
         }
     }
 }
@@ -150,12 +137,15 @@
     .tile:nth-of-type(3n+2) .tile__expander {
         margin-left: calc(-100% - 15px);
     }
+
     .tile:nth-of-type(3n+3) .tile__expander {
         margin-left: calc(-200% - 30px);
     }
+
     .tile:nth-of-type(3n+4) {
         clear: left;
     }
+
     .tile__expander {
         width: calc(300% + 30px);
     }
@@ -165,9 +155,11 @@
     .tile:nth-of-type(2n+2) .tile__expander {
         margin-left: calc(-100% - 15px);
     }
+
     .tile:nth-of-type(2n+3) {
         clear: left;
     }
+
     .tile__expander {
         width: calc(200% + 15px);
     }

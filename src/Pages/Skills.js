@@ -1,28 +1,7 @@
 import React from 'react'
 import SkillTile from '../components/SkillTile'
-import $ from 'jquery'
 
 export default class Skills extends React.Component {
-
-    componentDidMount() {
-        var $cell = $('.tile');
-
-        $cell.find('.js-expander').click(function () {
-            var $thisCell = $(this).closest('.tile');
-
-            if ($thisCell.hasClass('is-collapsed')) {
-                $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed is-inactive');
-                $thisCell.removeClass('is-collapsed').addClass('is-expanded');
-
-                $cell.not($thisCell).hasClass('is-inactive') ?
-                    '' : $cell.not($thisCell).addClass('is-inactive');
-            } else {
-                $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-                $cell.not($thisCell).removeClass('is-inactive');
-            }
-        });
-    }
-
     render() {
 
         const skillsData = [
@@ -41,7 +20,7 @@ export default class Skills extends React.Component {
         ];
 
         let skills = skillsData.map((skill, index) => {
-			return <SkillTile key={index} tileId={skill.id} iconClass={skill.icon}>{skill.title}</SkillTile>
+			return <SkillTile key={index} tabIndex={index} tileId={skill.id} iconClass={skill.icon}>{skill.title}</SkillTile>
 		});
 
         return (
