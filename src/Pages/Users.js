@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { getUsers } from '../actions/userActions'
 import UsersList from '../components/UsersList'
 import Loader from '../components/Loader'
+
 class Users extends React.Component {
 
     componentDidMount() {
