@@ -252,23 +252,13 @@ img {
 .photo {
     max-width: 500px;
     filter: grayscale(1);
-    transition: all .5s ease-in-out;
+    transition: filter .5s ease-in-out;
 
     &_rounded {
         border-radius: $radius;
     }
 
-    &_enlarged {
-        position: absolute;
-        top: 50%;
-        right: 50%;
-        z-index: 99;
-        transform: translate(50%, -50%);
-        filter: grayscale(0);
-    }
-
     &:hover {
-        cursor: pointer;
         filter: grayscale(0);
     }
 }
