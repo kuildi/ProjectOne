@@ -1,22 +1,22 @@
 import React from 'react'
-import Loader from '../components/Loader'
+import Loader from './Loader'
 import User from './User'
 
-export default class UsersList extends React.Component {
+const UsersList = (props) => {
 
-    render() {
-        if (!this.props.users.length) {
-            return <Loader />
-        }
-
-        let users = this.props.users.map((user, index) => {
-            return <User key={index} {...user} />
-        })
-
-        return (
-            <section className="grid-container">
-                {users}
-            </section>
-        );
+    if (!props.users.length) {
+        return <Loader />
     }
+
+    let users = props.users.map((user, index) => {
+        return <User key={index} {...user} />
+    })
+
+    return (
+        <section className="grid-container">
+            {users}
+        </section>
+    );
 }
+
+export default UsersList

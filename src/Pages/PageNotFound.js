@@ -1,12 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-export default class PageNotFound extends React.Component {
+const PageNotFound = () => (
+    <>
+        <h1 className="text-center">
+            Извините, но страница не найдена
+            <br/>
+            ¯\_(ツ)_/¯
+        </h1>
+    </>
+)
 
-    render() {
-        return (
-            <article className="grid-main">
-                <h1 className="text-center grid__item_width_full main-content__header">Page not found</h1>
-            </article>
-        );
-    }
-}
+export default PageNotFound

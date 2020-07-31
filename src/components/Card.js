@@ -13,8 +13,8 @@ const Card = (props) => {
     );
 }
 
-export default Card
-
 Card.defaultProps = {
     header: 'Card header',
 }
+
+export default Card
