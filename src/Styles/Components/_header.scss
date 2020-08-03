@@ -1,0 +1,28 @@
+.main-header {
+    height: 60px;
+    background-color: $secondary-bg;
+
+    nav {
+        height: 100%;
+    }
+}
+
+.nav-block {
+    display: flex;
+
+    li {
+        display: inline-block;
+        position: relative;
+        margin: $m-space $m-space 0 0;
+    }
+
+    a {
+        outline: none;
+    }
+}
+
+.header_sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}

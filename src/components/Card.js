@@ -1,23 +1,20 @@
-import React from 'react';
-import Button from './Button';
+import React from 'react'
 
-export default class Card extends React.Component {
-    render() {
-        return (
-            <aside className={"card hoverable bg-alert " + this.props.class}>
-                <header className="card__header">
-                    <h3>{this.props.header}</h3>
-                </header>
-                <div className="card__content text-overflow_fade">
-                    <p>{this.props.text}</p>
-                    {this.props.children}
-                </div>
-            </aside>
-        );
-    }
+const Card = (props) => {
+    return (
+        <aside className={"card hoverable bg-alert " + props.class}>
+            <header className="card__header">
+                <h3>{props.header}</h3>
+            </header>
+            <div className="card__content">
+                {props.children}
+            </div>
+        </aside>
+    );
 }
 
 Card.defaultProps = {
- header: 'Header text',
- text: 'Default textDefault text Default text Default text Default textDefault text'       
+    header: 'Card header',
 }
+
+export default Card

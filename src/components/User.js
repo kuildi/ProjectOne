@@ -1,19 +1,27 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Card from './Card'
+import Icon from './Icon'
 
 
-export default class User extends React.Component {
-    render() {
+const User = (props) => (
+    <Card header={props.name} >
+        <section>
+            <Icon class="card__icon" name="profile" />
+            {props.username}
+        </section>
+        <section>
+            <Icon class="card__icon" name="mail_gradient" />
+            {props.email}
+        </section>
+        <section>
+            <Icon class="card__icon" name="phone" />
+            {props.phone}
+        </section>
+        <section>
+            <Icon class="card__icon" name="web" />
+            {props.website}
+        </section>
+    </Card>
+)
 
-        return (
-            <Link to={`/users/${this.props.id}`}>
-                <Card header={this.props.username} text={this.props.name}>
-                    <p>{this.props.email}</p>
-                    <p>{this.props.phone}</p>
-                    <p>{this.props.website}</p>
-                </Card>
-            </Link>
-        );
-    }
-}
+export default User

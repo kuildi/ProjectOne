@@ -1,0 +1,36 @@
+.card {
+    min-height: 100px;
+    position: relative;
+    text-align: left;
+    border-radius: $radius;
+    background-color: $secondary-bg;
+
+    &__header {
+        font-size: 20px;
+        color: #fff;
+        padding: $s-space $m-space;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+        margin-right: $s-space;
+    }
+    
+    &__content {
+        width: 100%;
+        max-height: 100%;
+        position: relative;
+        padding: $s-space $m-space;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        section {
+            display: flex;
+            align-items: center;
+            margin-bottom: $s-space;
+        }
+    }
+}

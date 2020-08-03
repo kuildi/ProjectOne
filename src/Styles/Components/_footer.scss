@@ -1,0 +1,12 @@
+footer {
+    margin-top: auto;
+}
+
+.main-footer {
+    height: 60px;
+    background-color: $secondary-bg;
+
+    &__header_indent-b_s {
+        margin-bottom: $s-space;
+    }
+}

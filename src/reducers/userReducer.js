@@ -1,5 +1,4 @@
 import * as ConstantUsers from '../constants/userConstants';
-// import merge from 'lodash/merge';
 
 export function usersReducer(state = {users: [], is_loading: false}, action) {
 	switch(action.type) {
@@ -13,14 +12,6 @@ export function usersReducer(state = {users: [], is_loading: false}, action) {
 		}
 		case ConstantUsers.GET_USERS_REJECTED: {
 			state = {...state, is_loading: false, error_message: action.payload.message};
-			break;
-		}
-		case ConstantUsers.ADD_USER: {
-			state = {
-				...state, 
-				is_loading: false, 
-				users: [...state.users, action.payload]
-			};
 			break;
 		}
 	}

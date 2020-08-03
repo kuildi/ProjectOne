@@ -1,0 +1,264 @@
+// Utils
+@import './Utils/variables';
+@import './Utils/reset';
+@import './Utils/grids';
+
+// Components
+@import './Components/buttons';
+@import './Components/cards';
+@import './Components/header';
+@import './Components/footer';
+@import './Components/tiles';
+
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slide-enter,
+.slide-exit {
+    transition: transform 500ms ease-out;
+}
+
+.slide-enter {
+    transform: translateX(100%);
+}
+
+.slide-enter.slide-enter-active {
+    transform: translateX(0%);
+}
+
+.slide-exit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(0%);
+}
+
+.slide-exit-active {
+    transform: translateX(-100%);
+}
+
+
+
+.fade-enter,
+.fade-exit {
+    transition: all 500ms ease-in-out;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+}
+
+.fade-exit {
+    display: none;
+    opacity: 0;
+}
+
+.fade-exit-active {
+    opacity: 1;
+}
+
+
+
+
+body {
+    font-family: $fontFamily;
+    font-size: $m-fontSize;
+    color: $primary-color;
+    background-color: $primary-bg;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 0;
+}
+
+ol {
+    list-style: inside;
+}
+
+h1 {
+    font-size: $xl-fontSize;
+}
+
+h2 {
+    font-size: $l-fontSize;
+}
+
+h1,
+h2 {
+    margin-bottom: $m-space;
+}
+
+a {
+    display: inline-block;
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.link-highlight {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: $gradient-color;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        transform: scaleX(1);
+        transform-origin: left center;
+        transition: transform 0.3s cubic-bezier(0.694, 0, 0.335, 1);
+        pointer-events: none;
+    }
+
+    &:hover::before {
+        transform: scaleX(0);
+        transform-origin: right center;
+    }
+}
+
+.gradient-color {
+    background: $gradient-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section {
+    &_space-v_l {
+        padding: $l-space 0;
+    }
+
+    &_space-v_xl {
+        padding: 8rem 0;
+    }
+
+    &_min-height {
+        min-height: calc(100vh - 200px);
+    }
+
+    @media screen and (max-width: $l-break) {
+        &_min-height {
+            min-height: calc(100vh - 120px);
+        }
+    }
+}
+
+.content-wrap {
+    width: calc(100vw - 50px);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: $main-bg-image;
+}
+
+.main-content {
+    margin: $l-space 0;
+    position: relative;
+    box-shadow: 0px 3px 15px 3px rgba(0, 0, 0, 0.5);
+
+
+    @media screen and (max-width: $l-break) {
+        & {
+            margin: 0;
+        }
+    }
+}
+
+.primary-text {
+    font-size: 1.2 * $m-fontSize;
+
+    &_indent-b_l {
+        margin-bottom: $l-space;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hoverable {
+    transition: all .3s linear;
+
+    &:hover {
+        box-shadow: 3px 9px 9px 0px rgba(0, 0, 0, 0.3);
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: $m-space;
+}
+
+@media screen and (max-width: $s-break) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .primary-text {
+        font-size: 1.2em;
+    }
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-link {
+    transition: all .3s ease-in-out;
+    color: #27CBFF;
+
+    &:hover {
+        color: #6FCF97;
+    }
+}
+
+.photo {
+    max-width: 500px;
+    filter: grayscale(1);
+    transition: filter .5s ease-in-out;
+
+    &_rounded {
+        border-radius: $radius;
+    }
+
+    &:hover {
+        filter: grayscale(0);
+    }
+}
