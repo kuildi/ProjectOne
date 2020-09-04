@@ -27,7 +27,7 @@ const Skills = () => {
             <h1 className="gradient-color">Умения</h1>
             <section className="tiles">
                 {skills}
-                <p className="primary-text">Что бы поближе познакомиться с примером моего кода, прошу заглянуть в <a className="text-link" href="https://github.com/kuildi/ProjectOne">репозитрий</a> данного сайта на Github.</p>
+                <p className="text_primary">Что бы поближе познакомиться с примером моего кода, прошу заглянуть в <a className="text_link" href="https://github.com/kuildi/ProjectOne">репозитрий</a> данного сайта на Github.</p>
             </section>
         </article>
     );

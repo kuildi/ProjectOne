@@ -10,21 +10,21 @@ const About = () => (
     <article className="content-wrap section_space-v_l">
         <section className="grid-container grid-container_about grid-container_indent-b_l">
             <div className="tile-about grid-container__section-work">
-                <p className="primary-text">На текущем месте работы отвечаю за верстку и переход проекта на новый дизайн. Координирую работу нескольких коллег, провожу кодревью.
+                <p className="text_primary">На текущем месте работы отвечаю за верстку и переход проекта на новый дизайн. Координирую работу нескольких коллег, провожу кодревью.
                     </p>
-                <p className="primary-text">
+                <p className="text_primary">
                     Занимаюсь рефакторингом стилей, внедрением семантики HTML5 и БЭМ. Написал styleguide для HTML и CSS.
                     Учавствую в обсуждении нового функционала.
                     </p>
             </div>
             <div className="tile-about grid-container__section-education">
-                <p className="primary-text">
+                <p className="text_primary">
                     Окончил ВолгГТУ, факультет электроники и вычеслительной техники по направлению “Системы автоматизированного проектирования и поискового конструирования”.
                         </p>
-                <p className="primary-text">
+                <p className="text_primary">
                     Для повышения уровня английского языка занимался в онлайн школе SkyEng.
                         </p>
-                <p className="primary-text">
+                <p className="text_primary">
                     Начал свой путь в React с курса GeekBrains ReactJS.
                         </p>
             </div>
@@ -38,7 +38,7 @@ const About = () => (
                 <Image source={imageThird} />
             </div>
             <div className="tile-about grid-container__section-hobby">
-                <p className="primary-text">
+                <p className="text_primary">
                     Интересуюсь веб-дизайном. Постоянно в поиске новых знаний. Готов к нестандартным, интересным задачам, которые позволят профессионально расти.
                     Цель - делать крутые, востребованные и качественные веб-приложения с заботой о пользователе.
                     </p>
