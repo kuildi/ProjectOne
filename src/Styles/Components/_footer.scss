@@ -3,7 +3,8 @@ footer {
 }
 
 .main-footer {
-    height: 60px;
+    min-height: 60px;
+    padding-bottom: $m-space;
     background-color: $secondary-bg;
 
     &__header_indent-b_s {
