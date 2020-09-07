@@ -8,6 +8,7 @@ const Footer = () => (
                 <li><a className="link-highlight" href="https://github.com/kuildi">Github</a></li>
                 <li><a className="link-highlight" href="https://www.linkedin.com/in/ilya-kuznetsov-4a063b1b2">LinkedIn</a></li>
                 <li><a className="link-highlight" href="https://vk.com/id34475555">VK</a></li>
+                <li><a className="link-highlight" href="https://t.me/KuilDi">Telegram</a></li>
             </ul>
         </div>
     </footer>
