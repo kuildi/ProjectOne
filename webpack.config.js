@@ -1,8 +1,15 @@
 const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const fallbackApi = require('connect-history-api-fallback');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+	optimization: {
+		minimize: true,
+		minimizer: [new TerserPlugin({
+			cache: true,
+		})],
+	},
 	entry: './src/App.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -14,8 +21,8 @@ module.exports = {
 			[
 				{
 					test: /\.js$/,
-					loader: "babel-loader",
-					exclude: "/node_modules/"
+					loader: 'babel-loader',
+					exclude: '/node_modules/'
 				},
 				{
 					test: /\.s?css$/,
@@ -24,11 +31,11 @@ module.exports = {
 				{
 					test: /\.(png|jpe?g|gif)$/i,
 					use: [
-					  {
-						loader: 'file-loader',
-					  },
+						{
+							loader: 'file-loader',
+						},
 					],
-				  },
+				},
 				{
 					test: /\.svg$/,
 					loader: 'svg-sprite-loader'
