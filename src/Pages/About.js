@@ -10,23 +10,24 @@ const About = () => (
     <article className="content-wrap section_space-v_l">
         <section className="grid-container grid-container_about grid-container_indent-b_l">
             <div className="tile-about grid-container__section-work">
-                <p className="text_primary">На текущем месте работы отвечаю за верстку и переход проекта на новый дизайн. Координирую работу нескольких коллег, провожу кодревью.
-                    </p>
                 <p className="text_primary">
-                    Занимаюсь рефакторингом стилей, внедрением семантики HTML5 и БЭМ. Написал styleguide для HTML и CSS.
-                    Учавствую в обсуждении нового функционала.
-                    </p>
+                Занимаюсь версткой и frontend частью одного из продуктов компании. Отвечаю за планирование спринтов по верстке, координирую работу коллег с версткой и стилями, учавствую в разработке новых фич приложения.
+
+                Достижения за время работы над проектом:
+                реализовал редизайн приложения,
+                внедрил БЭМ и компонентный подход к верстке,
+                SVG-спрайты,
+                описал принципы написания HTML и CSS кода,
+                рефакторинг CSS.              
+                </p>
             </div>
             <div className="tile-about grid-container__section-education">
                 <p className="text_primary">
                     Окончил ВолгГТУ, факультет электроники и вычеслительной техники по направлению “Системы автоматизированного проектирования и поискового конструирования”.
-                        </p>
+                </p>
                 <p className="text_primary">
                     Для повышения уровня английского языка занимался в онлайн школе SkyEng.
-                        </p>
-                <p className="text_primary">
-                    Начал свой путь в React с курса GeekBrains ReactJS.
-                        </p>
+                </p>
             </div>
             <div className="grid-container__section-photo_first">
                 <Image source={imageFirst} />

@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from './Menu'
 
-const Navbar = () => {
+const Header = () => {
     const menuItems = [
         { id: "main", href: "/", title: "Главная" },
         { id: "skills", href: "/skills", title: "Умения" },
@@ -17,4 +17,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar
+export default Header

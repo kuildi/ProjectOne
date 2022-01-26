@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 
@@ -11,7 +11,7 @@ export default class Layout extends React.Component {
     render() {
         return (
             <>
-                <Navbar />
+                <Header />
                 <main className="main-bg main-content section_min-height">
                     {this.props.children}
                 </main>

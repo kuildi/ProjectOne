@@ -31,10 +31,6 @@
         &_space-b_l {
             padding-bottom: 8rem;
         }
-
-        p {
-            text-indent: $l-space;
-        }
     }
 
     &__inner {
@@ -50,45 +46,38 @@
 
         transition: box-shadow .4s ease-in-out;
 
-        &__icon {
-            width: 40px;
-            height: 40px;
-            margin-right: $m-space;
-        }
-
         &:hover {
             box-shadow: $primary-shadow;
         }
     }
 
+    &__icon {
+        width: 40px;
+        height: 40px;
+        margin-right: $m-space;
+    }
+
     &__expander {
         width: 100%;
         position: relative;
-        padding: $m-space;
         background-color: $transparent-bg;
         box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
         border-radius: $radius;
 
         will-change: height, padding, opacity, margin-top;
-        transition: all .5s ease-in-out;
+        transition: all .5s ease;
+        transform: scaleY(0);
+        transform-origin: top center;
 
         display: flex;
         flex-direction: column;
+    }
 
-        z-index: 99;
-
-        p {
-            text-indent: $m-space;
-            margin-bottom: $m-space;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        li {
-            list-style: inside;
-        }
+    &__text {
+        text-indent: $m-space;
+        pointer-events: none;
+        transition: all .5s ease;
+        transform-origin: top center;
     }
 
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -105,30 +94,34 @@
         }
     }
 
-    &.is-collapsed {
-        .tile__inner {
-            &:after {
-                content: "";
-                opacity: 0;
-            }
+    &.tile_collapsed {
+        .tile__expander {
+            opacity: 0;
+            height: auto;
         }
 
-        .tile__expander {
-            margin-top: 0;
-            padding: 0;
-            opacity: 0;
+        .tile__text {
+            max-height: 0;
+            transform: scaleY(0);
         }
     }
 
-    &.is-expanded {
+    &.tile_expanded {
         .tile__inner {
             transform: scale(1.05);
             box-shadow: $primary-shadow;
         }
 
         .tile__expander {
+            padding: $m-space;
             margin-top: 15px;
+            transform: scaleY(1);
             opacity: 1;
+        }
+
+        .tile__text {
+            max-height: 300px;
+            transform: scaleY(1);
         }
     }
 }
