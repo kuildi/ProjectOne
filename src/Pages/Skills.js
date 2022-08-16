@@ -55,7 +55,7 @@ const Skills = () => {
         <article className="content-wrap section_space-v_l">
             <h1 className="gradient-color">Умения</h1>
             <section className="tiles">
-                <p className="text_primary">Что бы поближе познакомиться с примером моего кода, прошу заглянуть в <a className="text_link" href="https://github.com/kuildi/ProjectOne">репозитрий</a> данного сайта на Github.</p>
+                <p className="text_primary text_indent-b_l">Что бы поближе познакомиться с примером моего кода, прошу заглянуть в <a className="text_link" href="https://github.com/kuildi/ProjectOne">репозитрий</a> данного сайта на Github.</p>
                 {skills}
             </section>
         </article>

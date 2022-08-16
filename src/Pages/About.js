@@ -11,7 +11,7 @@ const About = () => (
         <section className="grid-container grid-container_about grid-container_indent-b_l">
             <div className="tile-about grid-container__section-work">
                 <p className="text_primary">
-                Занимался версткой и frontend частью одного из продуктов компании. Отвечал за планирование спринтов по верстке, координировал работу коллег с версткой и стилями, учавствовал в разработке новых фич приложения.
+                Занимался версткой и frontend частью одного из продуктов компании Danfoss. Отвечал за планирование спринтов по верстке, координировал работу коллег с версткой и стилями, учавствовал в разработке новых фич приложения.
 
                 Достижения за время работы над проектом:
                 реализовал редизайн приложения,
@@ -24,9 +24,6 @@ const About = () => (
             <div className="tile-about grid-container__section-education">
                 <p className="text_primary">
                     Окончил ВолгГТУ, факультет электроники и вычеслительной техники по направлению “Системы автоматизированного проектирования и поискового конструирования”.
-                </p>
-                <p className="text_primary">
-                    Для повышения уровня английского языка занимался в онлайн школе SkyEng.
                 </p>
             </div>
             <div className="grid-container__section-photo_first">
